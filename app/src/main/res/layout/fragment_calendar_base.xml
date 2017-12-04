@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_calendar_year_month"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="年月"
+        android:textSize="14.5sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_calendar_base_day_index_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="M"
+            android:textColor="@color/calendar_monday_index"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fragment_calendar_base_day_index_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="T"
+            android:textColor="@color/calendar_monday_index"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fragment_calendar_base_day_index_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="W"
+            android:textColor="@color/calendar_monday_index"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fragment_calendar_base_day_index_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="T"
+            android:textColor="@color/calendar_monday_index"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fragment_calendar_base_day_index_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="F"
+            android:textColor="@color/calendar_monday_index"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fragment_calendar_base_day_index_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="S"
+            android:textColor="@color/calendar_monday_index"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fragment_calendar_base_day_index_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="S"
+            android:textColor="@color/calendar_monday_index"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+        android:id="@+id/fragment_calendar_base_week_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+        android:id="@+id/fragment_calendar_base_week_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+        android:id="@+id/fragment_calendar_base_week_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+        android:id="@+id/fragment_calendar_base_week_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+        android:id="@+id/fragment_calendar_base_week_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+        android:id="@+id/fragment_calendar_base_week_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

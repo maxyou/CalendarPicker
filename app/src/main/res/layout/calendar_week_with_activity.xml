@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_week_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/calendar_week_day_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+            android:id="@+id/calendar_day1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+            android:id="@+id/calendar_day2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+            android:id="@+id/calendar_day3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+            android:id="@+id/calendar_day4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+            android:id="@+id/calendar_day5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+            android:id="@+id/calendar_day6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+            android:id="@+id/calendar_day7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>

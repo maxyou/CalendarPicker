@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_day_layout"
+    android:layout_width="37.8dp"
+    android:layout_height="37.8dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/calendar_day_in_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/calendar_day_have_activity"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/audio_unread_dot_3x" />
+
+</LinearLayout>
