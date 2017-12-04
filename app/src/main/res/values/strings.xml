@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">CalendarPicker</string>
+
+    <!-- date switch -->
+    <string name="time_string_today">Today</string>
+    <string name="time_string_yesterday">Yesterday</string>
+    <string name="time_mm_dd_hh_mm">M-d h:mm</string>
+    <string name="time_yyyymmddhhmmssssss">yyyyMMddHHmmssSSS</string>
+    <string name="time_yyyymmddhhmmss">yyyyMMddHHmmss</string>
+    <string name="time_utc">yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'</string>
+    <string name="time_yyyy_MM_dd_HH_mm">yyyy-MM-dd HH:mm</string>
+    <string name="time_yyyy_mm_dd">yyyy-MM-dd</string>
+    <string name="time_am_hh_mm">a h:mm</string>
+    <string name="time_HH_mm">HH:mm</string>
+    <string name="time_yyyy_mm_dd_week">yyyy/M/d E</string>
+    <string name="time_yy_mm_dd">yy/MM/dd</string>
+    <string name="time_m_d">MM.dd</string>
+    <string name="time_am_hh_mm_old">a h:mm</string>
+    <string name="time_year"> - </string>
+    <string name="time_month"></string>
+    <string name="time_hour">H</string>
+    <string name="time_MM_dd">MM.dd</string>
+    <string name="time_yyyy_mm_dd_dot">yyyy.MM.dd</string>
+    <string name="time_yyyy_mm_dd_hh_mm_dot">yyyy.MM.dd HH:mm</string>
+
 </resources>

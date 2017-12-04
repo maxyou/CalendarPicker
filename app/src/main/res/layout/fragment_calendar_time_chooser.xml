@@ -1,0 +1,165 @@
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_time_chooser_time_chooser_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/calendar_time_chooser_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/Black" />
+
+    <LinearLayout
+        android:id="@+id/calendar_time_chooser_layout"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/calendar_time_chooser_panel"
+            android:layout_width="match_parent"
+            android:layout_height="40.5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/calendar_time_chooser_panel_back"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"
+                android:textColor="#4366A0"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/calendar_time_chooser_panel_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/calendar_time_chooser_panel_confirm"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical|right"
+                android:text="sure"
+                android:textColor="#4366A0"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/calendar_time_chooser_blocks"
+            android:layout_width="match_parent"
+            android:layout_height="380dp">
+
+            <TimePicker
+                android:id="@+id/calendar_time_chooser_blocks_timepicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/White"
+                android:calendarViewShown="false"
+                android:timePickerMode="spinner">
+
+            </TimePicker>
+
+            <RelativeLayout
+                android:id="@+id/calendar_time_chooser_blocks_calendar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/calendar_time_chooser_blocks_calendar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <!--<fragment-->
+                <!--android:id="@+id/calendar_time_chooser_fragment_chooser"-->
+                <!--android:name="co.docy.ourgroups.Fragments.FragmentCalendarViewpager"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:tag="calendar_time_chooser_viewpager_chooser" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/calendar_time_chooser_blocks_calendar_selected_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/calendar_selected_circle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="选中"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/calendar_time_chooser_blocks_calendar_today_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/calendar_today_circle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="今天"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
