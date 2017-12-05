@@ -2,11 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/White"
+    android:background="@color/Red"
     android:orientation="vertical">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/calendar_viewpager"
+        android:background="@color/Yellow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

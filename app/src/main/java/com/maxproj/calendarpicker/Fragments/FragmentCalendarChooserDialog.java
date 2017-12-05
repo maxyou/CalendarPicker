@@ -97,7 +97,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
         calendar_time_chooser_layout.setVisibility(View.VISIBLE);
         calendar_time_chooser_layout.setY(MyConfig.screenHeight);
         calendar_time_chooser_layout.animate().y(MyConfig.screenHeight
-                - calendar_time_chooser_layout.getHeight()).setDuration(300);
+                - calendar_time_chooser_layout.getHeight()-300).setDuration(300);
     }
 
 
