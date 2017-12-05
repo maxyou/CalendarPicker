@@ -38,6 +38,21 @@ public class MyConfig {
     public static int screenWidth;
     public static int screenHeight;
 
+    public static int dp2Px(Context context, float dp) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f); //from http://developer.android.com/guide/practices/screens_support.html#screen-independence
+//        return (int) Math.round(scale * dp);
+    }
+
+    public static int px2dip(Context context, float pxValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
+    public static int getPxFromDimen(Context context, int dimen_id) {
+        return context.getResources().getDimensionPixelSize(dimen_id);
+    }
+
     public static Date string_yyyy_MM_dd_HH_mm2Date(String time) {
         Date date;
 

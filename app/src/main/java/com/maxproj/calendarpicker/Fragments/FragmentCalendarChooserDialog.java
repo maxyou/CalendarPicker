@@ -95,9 +95,13 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
         }
 
         calendar_time_chooser_layout.setVisibility(View.VISIBLE);
-        calendar_time_chooser_layout.setY(MyConfig.screenHeight);
-        calendar_time_chooser_layout.animate().y(MyConfig.screenHeight
-                - calendar_time_chooser_layout.getHeight()-300).setDuration(300);
+//        calendar_time_chooser_layout.setY(getActivity().findViewById(android.R.id.content).getY());
+        calendar_time_chooser_layout.setY(getActivity().findViewById(android.R.id.content).getHeight());
+//        calendar_time_chooser_layout.setTranslationY(MyConfig.dp2Px(getActivity(), 50));
+
+        calendar_time_chooser_layout.animate().y(getActivity().findViewById(android.R.id.content).getHeight()
+                - calendar_time_chooser_layout.getHeight()).setDuration(300);
+//        calendar_time_chooser_layout.animate().y(MyConfig.screenHeight - MyConfig.dp2Px(getActivity(), 100)).setDuration(300);
     }
 
 

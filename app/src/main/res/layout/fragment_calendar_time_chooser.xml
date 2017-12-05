@@ -14,7 +14,7 @@
     <LinearLayout
         android:id="@+id/calendar_time_chooser_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:background="@color/Green"
         android:orientation="vertical"
         android:visibility="invisible">
@@ -22,7 +22,7 @@
         <LinearLayout
             android:id="@+id/calendar_time_chooser_title_layout"
             android:layout_width="match_parent"
-            android:layout_height="40.5dp"
+            android:layout_height="50dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -63,7 +63,6 @@
         <FrameLayout
             android:id="@+id/calendar_time_chooser_viewpager_container"
             android:background="@color/Chocolate"
-            android:padding="15dp"
             android:layout_width="match_parent"
             android:layout_height="300dp">
 
@@ -73,7 +72,7 @@
         <LinearLayout
             android:id="@+id/calendar_time_chooser_panel_layout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="@color/Blue"
             android:orientation="horizontal">
 
