@@ -94,32 +94,32 @@
         android:layout_width="match_parent"
         android:layout_height="5dp" />
 
-    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+    <com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity
         android:id="@+id/fragment_calendar_base_week_0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+    <com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity
         android:id="@+id/fragment_calendar_base_week_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+    <com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity
         android:id="@+id/fragment_calendar_base_week_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+    <com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity
         android:id="@+id/fragment_calendar_base_week_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+    <com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity
         android:id="@+id/fragment_calendar_base_week_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <co.docy.ourgroups.Views.ViewCalendarWeekWithActivity
+    <com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity
         android:id="@+id/fragment_calendar_base_week_5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

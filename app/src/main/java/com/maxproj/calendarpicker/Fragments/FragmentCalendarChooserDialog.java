@@ -23,42 +23,25 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 
     View calendar_time_chooser_mask;
     LinearLayout calendar_time_chooser_layout;
-    LinearLayout calendar_time_chooser_panel;
-    TextView calendar_time_chooser_panel_back;
-    TextView calendar_time_chooser_panel_title;
+    LinearLayout calendar_time_chooser_title_layout;
+    TextView calendar_time_chooser_title;
+    TextView calendar_time_chooser_selected;
+    TextView calendar_time_chooser_today;
+    FrameLayout calendar_time_chooser_viewpager_container;
+    LinearLayout calendar_time_chooser_panel_layout;
+    TextView calendar_time_chooser_panel_cancel;
     TextView calendar_time_chooser_panel_confirm;
-    FrameLayout calendar_time_chooser_blocks;
-    TimePicker calendar_time_chooser_blocks_timepicker;
-    RelativeLayout calendar_time_chooser_blocks_calendar_layout;
-    LinearLayout calendar_time_chooser_blocks_calendar_container;
-    LinearLayout calendar_time_chooser_blocks_calendar_selected_icon;
-    LinearLayout calendar_time_chooser_blocks_calendar_today_icon;
 
     final String FRAGMENT_VIEWPAGER_TAG = "fragment_calendar_time_chooser";
-    FragmentCalendarViewpager calendar_time_chooser_blocks_calendar_viewpager;
 
-    int step;
-    private void setStepMonth(){
-        step = 1;
-        calendar_time_chooser_panel_title.setText("calendar_time_chooser_panel_title month");
-    }
-    private boolean isStepMonth(){
-        return step == 1;
-    }
-    private void setStepTime(){
-        step = 2;
-        calendar_time_chooser_panel_title.setText("calendar_time_chooser_panel_title time");
-    }
-    private boolean isStepTime(){
-        return step == 2;
-    }
+    FragmentCalendarViewpager calendar_time_chooser_viewpager;
 
     CalendarTimeChooser calendarTimeChooser;
     CalendarDay daySelected;
     CalendarTimeChooser calendarTimeChooserOnComplete = new CalendarTimeChooser(null, null);
 
     public interface CalendarTimeChooseComplete{
-            public void onComplete(CalendarTimeChooser calendarTimeChooser);
+            void onComplete(CalendarTimeChooser calendarTimeChooser);
     }
     public CalendarTimeChooseComplete calendarTimeChooseComplete;
 
@@ -95,7 +78,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 
         if(daySelected != null) {
 
-            calendar_time_chooser_blocks_calendar_viewpager.gotoDay(CalendarDay.clone(daySelected));
+            calendar_time_chooser_viewpager.gotoDay(CalendarDay.clone(daySelected));
 //            calendar_time_chooser_blocks_calendar_viewpager.setSelectedDay(CalendarDay.clone(daySelected));
 
             new Handler().postDelayed(new Runnable() {
@@ -108,7 +91,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
                 }
             }, 100);
         }else{
-            calendar_time_chooser_blocks_calendar_viewpager.gotoTodayMonth();
+            calendar_time_chooser_viewpager.gotoTodayMonth();
         }
 
         calendar_time_chooser_layout.setVisibility(View.VISIBLE);
@@ -117,17 +100,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
                 - calendar_time_chooser_layout.getHeight()).setDuration(300);
     }
 
-    private void initTime(){
 
-        if(calendarTimeChooser.time == null){
-            return;
-        }
-
-        if(calendarTimeChooser.time.hour != -1) {
-            calendar_time_chooser_blocks_timepicker.setCurrentHour(calendarTimeChooser.time.hour);
-            calendar_time_chooser_blocks_timepicker.setCurrentMinute(calendarTimeChooser.time.minute);
-        }
-    }
 
     private void closeFragment(){
 
@@ -135,7 +108,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
             @Override
             public void run() {
 
-                calendar_time_chooser_blocks_calendar_viewpager.closeFragment();
+                calendar_time_chooser_viewpager.closeFragment();
                 getActivity().getFragmentManager().beginTransaction().remove(FragmentCalendarChooserDialog.this).commit();
             }
         });
@@ -151,19 +124,11 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
             }
         });
 
-        calendar_time_chooser_panel_back.setOnClickListener(new View.OnClickListener() {
+        calendar_time_chooser_panel_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(isStepMonth()) {
-
                     closeFragment();
-
-                }else if(isStepTime()) {
-
-                    calendar_time_chooser_blocks_calendar_layout.animate().x(0).setDuration(500);
-                    setStepMonth();
-                }
             }
         });
 
@@ -171,71 +136,58 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
             @Override
             public void onClick(View v) {
 
-                if(isStepMonth()) {
+                    calendar_time_chooser_layout.animate().x(-MyConfig.screenWidth).setDuration(500);
+
                     if (daySelected == null) {
 //                        MyConfig.MyToast(0, getActivity(), getActivity().getResources().getString(R.string.calendar_chooser_date_prompt));
                         return;
                     }
+                calendarTimeChooserOnComplete.month = new CalendarTimeChooser.Month(
+                        daySelected.day.getYearOfEra(),
+                        daySelected.day.getMonthOfYear(),
+                        daySelected.day.getDayOfMonth()
+                );
 
-                    calendar_time_chooser_blocks_calendar_layout.animate().x(-MyConfig.screenWidth).setDuration(500);
-
-                    initTime();
-                    setStepTime();
-
-                }else if(isStepTime()) {
-
-                    calendarTimeChooserOnComplete.time = new CalendarTimeChooser.Time(
-                            calendar_time_chooser_blocks_timepicker.getCurrentHour(),
-                            calendar_time_chooser_blocks_timepicker.getCurrentMinute()
-                    );
-                    calendarTimeChooserOnComplete.month = new CalendarTimeChooser.Month(
-                            daySelected.day.getYearOfEra(),
-                            daySelected.day.getMonthOfYear(),
-                            daySelected.day.getDayOfMonth()
-                    );
-
-                    if(calendarTimeChooseComplete != null){
-                        calendarTimeChooseComplete.onComplete(calendarTimeChooserOnComplete);
-                    }
-
-                    closeFragment();
+                if(calendarTimeChooseComplete != null){
+                    calendarTimeChooseComplete.onComplete(calendarTimeChooserOnComplete);
                 }
+
+                closeFragment();
+
             }
         });
 
-        calendar_time_chooser_blocks_calendar_selected_icon.setOnClickListener(new View.OnClickListener() {
+        calendar_time_chooser_selected.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calendar_time_chooser_blocks_calendar_viewpager.gotoDay(CalendarDay.clone(daySelected));
+                calendar_time_chooser_viewpager.gotoDay(CalendarDay.clone(daySelected));
             }
         });
 
-        calendar_time_chooser_blocks_calendar_today_icon.setOnClickListener(new View.OnClickListener() {
+        calendar_time_chooser_today.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calendar_time_chooser_blocks_calendar_viewpager.gotoTodayMonth();
+                calendar_time_chooser_viewpager.gotoTodayMonth();
             }
         });
     }
 
 
     private void findViews(View v) {
+
+
         calendar_time_chooser_mask = (View) v.findViewById(R.id.calendar_time_chooser_mask);
         calendar_time_chooser_layout = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_layout);
-        calendar_time_chooser_panel = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_panel);
-        calendar_time_chooser_panel_back = (TextView) v.findViewById(R.id.calendar_time_chooser_panel_back);
-        calendar_time_chooser_panel_title = (TextView) v.findViewById(R.id.calendar_time_chooser_panel_title);
+        calendar_time_chooser_title_layout = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_title_layout);
+        calendar_time_chooser_title = (TextView) v.findViewById(R.id.calendar_time_chooser_title);
+        calendar_time_chooser_selected = (TextView) v.findViewById(R.id.calendar_time_chooser_selected);
+        calendar_time_chooser_today = (TextView) v.findViewById(R.id.calendar_time_chooser_today);
+        calendar_time_chooser_panel_layout = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_panel_layout);
+        calendar_time_chooser_panel_cancel = (TextView) v.findViewById(R.id.calendar_time_chooser_panel_cancel);
         calendar_time_chooser_panel_confirm = (TextView) v.findViewById(R.id.calendar_time_chooser_panel_confirm);
-        calendar_time_chooser_blocks = (FrameLayout) v.findViewById(R.id.calendar_time_chooser_blocks);
-        calendar_time_chooser_blocks_timepicker = (TimePicker) v.findViewById(R.id.calendar_time_chooser_blocks_timepicker);
-        calendar_time_chooser_blocks_timepicker.setIs24HourView(true);
-        calendar_time_chooser_blocks_calendar_layout = (RelativeLayout) v.findViewById(R.id.calendar_time_chooser_blocks_calendar_layout);
-        calendar_time_chooser_blocks_calendar_container = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_blocks_calendar_container);
-        calendar_time_chooser_blocks_calendar_selected_icon = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_blocks_calendar_selected_icon);
-        calendar_time_chooser_blocks_calendar_today_icon = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_blocks_calendar_today_icon);
+        calendar_time_chooser_viewpager_container = (FrameLayout) v.findViewById(R.id.calendar_time_chooser_viewpager_container);
 
-
-        calendar_time_chooser_blocks_calendar_viewpager = new FragmentCalendarViewpager();
+        calendar_time_chooser_viewpager = new FragmentCalendarViewpager();
 //        calendar_time_chooser_blocks_calendar_viewpager.dayInViewPagerOnClickListener = new FragmentCalendarViewpager.DayInViewPagerOnClickListener() {
 //            @Override
 //            public void dayOnClicked(CalendarDay calendarDay) {
@@ -243,7 +195,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 //            }
 //        };
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.calendar_time_chooser_blocks_calendar_container, calendar_time_chooser_blocks_calendar_viewpager, FRAGMENT_VIEWPAGER_TAG);
+        ft.replace(R.id.calendar_time_chooser_viewpager_container, calendar_time_chooser_viewpager, FRAGMENT_VIEWPAGER_TAG);
 //        ft.addToBackStack(FRAGMENT_VIEWPAGER_TAG);
         ft.commit();
     }
@@ -254,13 +206,13 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
         super.onResume();
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                initMonth();
-                setStepMonth();
-            }
-        }, 100);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                initMonth();
+//                setStepMonth();
+//            }
+//        }, 100);
 
     }
 

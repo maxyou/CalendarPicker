@@ -11,49 +11,49 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+        <com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity
             android:id="@+id/calendar_day1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center" />
 
-        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+        <com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity
             android:id="@+id/calendar_day2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center" />
 
-        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+        <com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity
             android:id="@+id/calendar_day3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center" />
 
-        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+        <com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity
             android:id="@+id/calendar_day4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center" />
 
-        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+        <com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity
             android:id="@+id/calendar_day5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center" />
 
-        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+        <com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity
             android:id="@+id/calendar_day6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center" />
 
-        <co.docy.ourgroups.Views.ViewCalendarDayWithActivity
+        <com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity
             android:id="@+id/calendar_day7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
