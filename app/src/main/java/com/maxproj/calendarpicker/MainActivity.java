@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.maxproj.calendarpicker.Models.CalendarTimeChooser;
 import com.maxproj.calendarpicker.Utilities.MyConfig;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyConfig.openCalendarTimeChooser(MainActivity.this, null, null,null);
+                MyConfig.openCalendarTimeChooser(MainActivity.this, new CalendarTimeChooser.Month(2017,12,4), null,null);
             }
         });
 

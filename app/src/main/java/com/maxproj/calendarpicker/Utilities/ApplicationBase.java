@@ -26,7 +26,7 @@ public class ApplicationBase extends Application {
         display.getSize(size);
         MyConfig.screenWidth = size.x;
         MyConfig.screenHeight = size.y;
-        MyLog.d("", "screenWidth " + MyConfig.screenWidth + " screenHeight " + MyConfig.screenHeight);
+        MyLog.d("ApplicationBase", "screenWidth " + MyConfig.screenWidth + " screenHeight " + MyConfig.screenHeight);
 
         MyConfig.scale = getResources().getDisplayMetrics().density;
 

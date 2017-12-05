@@ -206,13 +206,12 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
         super.onResume();
 
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                initMonth();
-//                setStepMonth();
-//            }
-//        }, 100);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                initMonth();
+            }
+        }, 100);
 
     }
 
