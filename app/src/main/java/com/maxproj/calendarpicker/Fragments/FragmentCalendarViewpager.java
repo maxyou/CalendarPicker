@@ -13,6 +13,7 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 
 
 import com.maxproj.calendarpicker.Models.CalendarDay;
+import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
 import com.maxproj.calendarpicker.Utilities.MyLog;
 
@@ -26,15 +27,15 @@ public class FragmentCalendarViewpager extends FragmentBase {
     MonthPagerAdapter monthPagerAdapter;
     CalendarDay daySelected = new CalendarDay(null);
 
-//    public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
-//
-//        if(eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null){
-//            daySelected.copy(eventCalendarSelectDay.calendarDay);
-//        }else {
-//            daySelected.copy(null);
-//        }
-//
-//    }
+    public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
+
+        if(eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null){
+            daySelected.copy(eventCalendarSelectDay.calendarDay);
+        }else {
+            daySelected.copy(null);
+        }
+
+    }
 
     public interface DayInViewPagerOnClickListener{
         void dayOnClicked(CalendarDay calendarDay);

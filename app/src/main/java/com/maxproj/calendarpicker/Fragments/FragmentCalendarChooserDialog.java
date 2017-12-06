@@ -226,15 +226,15 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 //    public void onEventMainThread(EventHeartOneSecond eventHeartOneSecond) {
 //
 //    }
-//
-//    public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
-//
-//        if(eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null){
-//
-//            daySelected = CalendarDay.clone(eventCalendarSelectDay.calendarDay);
-//        }else {
-//
-//        }
-//    }
+
+    public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
+
+        if(eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null){
+
+            daySelected = CalendarDay.clone(eventCalendarSelectDay.calendarDay);
+        }else {
+
+        }
+    }
 
 }
