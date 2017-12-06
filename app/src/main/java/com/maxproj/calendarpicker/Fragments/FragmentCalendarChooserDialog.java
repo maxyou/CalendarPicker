@@ -143,7 +143,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
             @Override
             public void onClick(View v) {
 
-                    calendar_time_chooser_layout.animate().x(-MyConfig.screenWidth).setDuration(500);
+//                    calendar_time_chooser_layout.animate().x(-MyConfig.screenWidth).setDuration(500);
 
                     if (daySelected == null) {
 //                        MyConfig.MyToast(0, getActivity(), getActivity().getResources().getString(R.string.calendar_chooser_date_prompt));
