@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
+import com.maxproj.calendarpicker.Models.EventHeartOneSecond;
+
+import de.greenrobot.event.EventBus;
 
 
 public class FragmentBase extends Fragment {
 
-    boolean eventbut_registed = false;
+    boolean eventbus_registed = false;
 
     String title;
 
@@ -29,13 +32,7 @@ public class FragmentBase extends Fragment {
         super.onPause();
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
 
-
-
-    }
 
     @Override
     public void onStart() {
@@ -49,11 +46,32 @@ public class FragmentBase extends Fragment {
 
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        /**
+         * eventbus消息的处理可能引用view控件，所以eventbus的注册要在view控件初始化之后，所以挪动到这里
+         * view控件的初始化在onCreateView中
+         */
+        if(!eventbus_registed) {
+            EventBus.getDefault().register(this);
+            eventbus_registed = true;
+        }
+
+    }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
 
+        /**
+         * 要在view控件被解构之前断开eventbus
+         */
+        if(eventbus_registed) {
+            EventBus.getDefault().unregister(this);
+            eventbus_registed = false;
+        }
 
     }
 
@@ -78,5 +96,7 @@ public class FragmentBase extends Fragment {
        return false;
     }
 
+    public void onEventMainThread(EventHeartOneSecond eventHeartOneSecond) {
 
+    }
 }

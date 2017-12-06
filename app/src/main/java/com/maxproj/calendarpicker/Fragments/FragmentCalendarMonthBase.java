@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.CalendarMonth;
+import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
 import com.maxproj.calendarpicker.Utilities.MyConfig;
 import com.maxproj.calendarpicker.Utilities.MyLog;
@@ -16,6 +17,7 @@ import com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity;
 
 import org.joda.time.LocalDate;
 
+import de.greenrobot.event.EventBus;
 
 
 public class FragmentCalendarMonthBase extends FragmentBase {
@@ -41,9 +43,9 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         @Override
         public void dayOnClicked(CalendarDay calendarDay) {
 
-//            EventBus.getDefault().post(new EventCalendarSelectDay(CalendarDay.clone(calendarDay)));
-////            daySelected = calendarDay;
-////            updateCalendarPage();
+            EventBus.getDefault().post(new EventCalendarSelectDay(CalendarDay.clone(calendarDay)));
+//            daySelected = calendarDay;
+//            updateCalendarPage();
 
             if(dayInMonthOnClickListener != null){
                 dayInMonthOnClickListener.dayOnClicked(CalendarDay.clone(calendarDay));
@@ -52,18 +54,18 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         }
     };
 
-//    public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
-//
-//        if(eventCalendarSelectDay != null) {
-//            daySelected.copy(eventCalendarSelectDay.calendarDay);
-//
-//            MyLog.d("","EventCalendarSelectDay: monthbase ");
-//
-//        }else{
-//            daySelected.copy(null);
-//        }
-//        updateCalendarPage();
-//    }
+    public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
+
+        if(eventCalendarSelectDay != null) {
+            daySelected.copy(eventCalendarSelectDay.calendarDay);
+
+            MyLog.d("","EventCalendarSelectDay: monthbase ");
+
+        }else{
+            daySelected.copy(null);
+        }
+        updateCalendarPage();
+    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         MyLog.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");

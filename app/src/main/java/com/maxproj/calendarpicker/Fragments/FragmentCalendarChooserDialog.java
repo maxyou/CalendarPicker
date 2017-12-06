@@ -14,9 +14,12 @@ import android.widget.TimePicker;
 
 import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.CalendarTimeChooser;
+import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
 import com.maxproj.calendarpicker.Utilities.MyConfig;
 import com.maxproj.calendarpicker.Utilities.MyLog;
+
+import de.greenrobot.event.EventBus;
 
 
 public class FragmentCalendarChooserDialog extends FragmentBase {
@@ -87,7 +90,7 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
                  */
                 @Override
                 public void run() {
-//                    EventBus.getDefault().post(new EventCalendarSelectDay(CalendarDay.clone(daySelected)));
+                    EventBus.getDefault().post(new EventCalendarSelectDay(CalendarDay.clone(daySelected)));
                 }
             }, 100);
         }else{
