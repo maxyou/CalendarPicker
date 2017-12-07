@@ -8,21 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import com.maxproj.calendarpicker.Models.CalendarDay;
-import com.maxproj.calendarpicker.Models.CalendarTimeChooser;
+import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
-import com.maxproj.calendarpicker.Utilities.MyConfig;
 import com.maxproj.calendarpicker.Utilities.MyLog;
 
 import de.greenrobot.event.EventBus;
 
 
-public class FragmentCalendarChooserDialog extends FragmentBase {
+public class FragmentCalendarPicker extends FragmentBase {
 
     View calendar_time_chooser_mask;
     LinearLayout calendar_time_chooser_layout;
@@ -39,21 +36,21 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 
     FragmentCalendarViewpager calendar_time_chooser_viewpager;
 
-    CalendarTimeChooser calendarTimeChooser;
     CalendarDay daySelected;
-    CalendarTimeChooser calendarTimeChooserOnComplete = new CalendarTimeChooser(null, null);
+    YearMonthDay yearMonthDayPreset;
+    YearMonthDay yearMonthDaySelected;
 
-    public interface CalendarTimeChooseComplete{
-            void onComplete(CalendarTimeChooser calendarTimeChooser);
+    public interface CalendarPickerOnConfirm {
+            void onComplete(YearMonthDay yearMonthDay);
     }
-    public CalendarTimeChooseComplete calendarTimeChooseComplete;
+    public CalendarPickerOnConfirm calendarPickerOnConfirm;
 
 
-    public static FragmentCalendarChooserDialog newInstance(CalendarTimeChooser calendarTimeChooser, CalendarTimeChooseComplete calendarTimeChooseComplete) {
+    public static FragmentCalendarPicker newInstance(YearMonthDay yearMonthDay, CalendarPickerOnConfirm calendarPickerOnConfirm) {
 
-        FragmentCalendarChooserDialog f = new FragmentCalendarChooserDialog();
-        f.calendarTimeChooser = calendarTimeChooser;
-        f.calendarTimeChooseComplete = calendarTimeChooseComplete;
+        FragmentCalendarPicker f = new FragmentCalendarPicker();
+        f.yearMonthDayPreset = yearMonthDay;
+        f.calendarPickerOnConfirm = calendarPickerOnConfirm;
         return f;
     }
 
@@ -71,12 +68,8 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 
     private void initMonth(){
 
-        if(calendarTimeChooser.month == null){
-            return;
-        }
-
-        if(calendarTimeChooser.month.year != -1) {
-            daySelected = new CalendarDay(calendarTimeChooser.month.year, calendarTimeChooser.month.month, calendarTimeChooser.month.day);
+        if(yearMonthDayPreset != null && yearMonthDayPreset.year != -1) {
+            daySelected = new CalendarDay(yearMonthDayPreset.year, yearMonthDayPreset.month, yearMonthDayPreset.day);
         }
 
         if(daySelected != null) {
@@ -111,12 +104,12 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 
     private void closeFragment(){
 
-        calendar_time_chooser_layout.animate().y(MyConfig.screenHeight).setDuration(300).withEndAction(new Runnable() {
+        calendar_time_chooser_layout.animate().y(getActivity().findViewById(android.R.id.content).getHeight()).setDuration(300).withEndAction(new Runnable() {
             @Override
             public void run() {
 
                 calendar_time_chooser_viewpager.closeFragment();
-                getActivity().getFragmentManager().beginTransaction().remove(FragmentCalendarChooserDialog.this).commit();
+                getActivity().getFragmentManager().beginTransaction().remove(FragmentCalendarPicker.this).commit();
             }
         });
     }
@@ -149,14 +142,14 @@ public class FragmentCalendarChooserDialog extends FragmentBase {
 //                        MyConfig.MyToast(0, getActivity(), getActivity().getResources().getString(R.string.calendar_chooser_date_prompt));
                         return;
                     }
-                calendarTimeChooserOnComplete.month = new CalendarTimeChooser.Month(
+                yearMonthDaySelected = new YearMonthDay(
                         daySelected.day.getYearOfEra(),
                         daySelected.day.getMonthOfYear(),
                         daySelected.day.getDayOfMonth()
                 );
 
-                if(calendarTimeChooseComplete != null){
-                    calendarTimeChooseComplete.onComplete(calendarTimeChooserOnComplete);
+                if(calendarPickerOnConfirm != null){
+                    calendarPickerOnConfirm.onComplete(yearMonthDaySelected);
                 }
 
                 closeFragment();

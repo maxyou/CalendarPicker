@@ -128,11 +128,11 @@ public class FragmentCalendarViewpager extends FragmentBase {
     public class MonthPagerAdapter extends FragmentStatePagerAdapter {
 
         /**
-         * 从当前月开始，往前可以抹动10个月，往后可以抹动100个月
+         * 从当前月开始，往前可以抹动1000个月，往后可以抹动1000个月
          */
-        public final static int PREVIOUS_MONTH_CAN_SCROLL = 10;
+        public final static int PREVIOUS_MONTH_CAN_SCROLL = 1000;
         public final static int CURRENT_MONTH_IN_SCROLL = PREVIOUS_MONTH_CAN_SCROLL + 1;
-        public final static int AFTER_MONTH_CAN_SCROLL = 100;
+        public final static int AFTER_MONTH_CAN_SCROLL = 1000;
 
         public MonthPagerAdapter(FragmentManager fm) {
             super(fm);

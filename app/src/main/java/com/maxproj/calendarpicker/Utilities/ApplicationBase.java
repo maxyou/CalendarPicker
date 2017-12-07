@@ -19,16 +19,16 @@ public class ApplicationBase extends Application {
         MyConfig.app = getApplicationContext();
 
 
-        MyConfig.wm = (WindowManager) getSystemService(WINDOW_SERVICE);
-        Display display = MyConfig.wm.getDefaultDisplay();
-
-        Point size = new Point();
-        display.getSize(size);
-        MyConfig.screenWidth = size.x;
-        MyConfig.screenHeight = size.y;
-        MyLog.d("ApplicationBase", "screenWidth " + MyConfig.screenWidth + " screenHeight " + MyConfig.screenHeight);
-
-        MyConfig.scale = getResources().getDisplayMetrics().density;
+//        MyConfig.wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+//        Display display = MyConfig.wm.getDefaultDisplay();
+//
+//        Point size = new Point();
+//        display.getSize(size);
+//        MyConfig.screenWidth = size.x;
+//        MyConfig.screenHeight = size.y;
+//        MyLog.d("ApplicationBase", "screenWidth " + MyConfig.screenWidth + " screenHeight " + MyConfig.screenHeight);
+//
+//        MyConfig.scale = getResources().getDisplayMetrics().density;
 
 
     }

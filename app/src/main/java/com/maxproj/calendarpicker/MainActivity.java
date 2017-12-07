@@ -3,9 +3,9 @@ package com.maxproj.calendarpicker;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
-import com.maxproj.calendarpicker.Models.CalendarTimeChooser;
+import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Utilities.MyConfig;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,11 +16,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        TextView textView = (TextView) findViewById(R.id.textview);
-        textView.setOnClickListener(new View.OnClickListener() {
+        Button button_open = (Button) findViewById(R.id.button_open);
+        button_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyConfig.openCalendarTimeChooser(MainActivity.this, new CalendarTimeChooser.Month(2017,12,4), null,null);
+                MyConfig.openCalendarPicker(MainActivity.this, null, null);
+            }
+        });
+
+        Button button_preset = (Button) findViewById(R.id.button_preset);
+        button_preset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyConfig.openCalendarPicker(MainActivity.this, new YearMonthDay(2016,7,4), null);
             }
         });
 
