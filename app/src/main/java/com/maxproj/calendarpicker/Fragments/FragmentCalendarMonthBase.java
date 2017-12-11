@@ -10,8 +10,8 @@ import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.CalendarMonth;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
-import com.maxproj.calendarpicker.Utilities.MyConfig;
-import com.maxproj.calendarpicker.Utilities.MyLog;
+import com.maxproj.calendarpicker.Config.MyConfig;
+import com.maxproj.calendarpicker.Config.MyLog;
 import com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity;
 import com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity;
 

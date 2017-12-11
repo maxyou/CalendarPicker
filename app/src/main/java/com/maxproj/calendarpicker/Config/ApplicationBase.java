@@ -1,10 +1,7 @@
-package com.maxproj.calendarpicker.Utilities;
+package com.maxproj.calendarpicker.Config;
 
 import android.app.Application;
 import android.content.Context;
-import android.graphics.Point;
-import android.view.Display;
-import android.view.WindowManager;
 
 public class ApplicationBase extends Application {
 

@@ -1,8 +1,11 @@
-package com.maxproj.calendarpicker.Utilities;
+package com.maxproj.calendarpicker.Config;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.Toast;
 
 import com.maxproj.calendarpicker.Fragments.FragmentCalendarPicker;
 import com.maxproj.calendarpicker.Models.CalendarMonth;
@@ -122,5 +125,36 @@ public class MyConfig {
         ft.add(android.R.id.content, fragmentCalendarPicker);
         ft.addToBackStack("com.maxproj.calendarpicker");
         ft.commit();
+    }
+
+
+    public static void uiToast(final String s){
+
+        uiRun(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(app, s, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    public static void uiRun(Runnable runnable){
+
+
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+
+            if (runnable != null) {
+                runnable.run();
+            }
+        } else {
+
+            // runOnUiThread()) will execute the Runnable immediately.
+            // post() always puts the Runnable at the end of the event queue, even if you are already on the main application thread.
+
+            new Handler(Looper.getMainLooper()).post(runnable);
+
+        }
+
     }
 }

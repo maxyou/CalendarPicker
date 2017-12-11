@@ -1,6 +1,6 @@
 package com.maxproj.calendarpicker.Models;
 
-import com.maxproj.calendarpicker.Utilities.MyLog;
+import com.maxproj.calendarpicker.Config.MyLog;
 
 import org.joda.time.LocalDate;
 

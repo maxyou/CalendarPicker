@@ -15,10 +15,7 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
-import com.maxproj.calendarpicker.Utilities.MyLog;
-
-import org.joda.time.LocalDate;
-
+import com.maxproj.calendarpicker.Config.MyLog;
 
 
 public class FragmentCalendarViewpager extends FragmentBase {

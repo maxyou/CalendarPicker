@@ -1,9 +1,4 @@
-package com.maxproj.calendarpicker.Utilities;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+package com.maxproj.calendarpicker.Config;
 
 
 //import android.widget.Toast;
