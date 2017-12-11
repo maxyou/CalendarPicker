@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 builder.setPreset(new YearMonthDay(2016, 7, 4));
+                builder.setTodayText("今天");
                 builder.show();
             }
         });

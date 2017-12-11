@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.maxproj.calendarpicker.Config.MyConfig;
 import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
@@ -187,6 +188,9 @@ public class FragmentCalendarPicker extends FragmentBase {
         calendar_time_chooser_panel_confirm = (TextView) v.findViewById(R.id.calendar_time_chooser_panel_confirm);
         calendar_time_chooser_viewpager_container = (FrameLayout) v.findViewById(R.id.calendar_time_chooser_viewpager_container);
 
+        makeOptions();
+
+
         calendar_time_chooser_viewpager = new FragmentCalendarViewpager();
 //        calendar_time_chooser_blocks_calendar_viewpager.dayInViewPagerOnClickListener = new FragmentCalendarViewpager.DayInViewPagerOnClickListener() {
 //            @Override
@@ -200,6 +204,11 @@ public class FragmentCalendarPicker extends FragmentBase {
         ft.commit();
     }
 
+    private void makeOptions(){
+
+        MyConfig.optText(calendar_time_chooser_today, MyConfig.options.today, null);
+
+    }
 
     @Override
     public void onResume() {

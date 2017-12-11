@@ -87,7 +87,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
     public void updateCalendarPage() {
 
-        fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+"年"+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
+        fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
 
         viewCalendarWeekWithActivity_0.setViewCalendarWeek(calendarMonth.calendarWeeks.get(0), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);
         viewCalendarWeekWithActivity_1.setViewCalendarWeek(calendarMonth.calendarWeeks.get(1), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);

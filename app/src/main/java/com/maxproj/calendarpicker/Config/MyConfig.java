@@ -5,10 +5,14 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.maxproj.calendarpicker.Builder;
 import com.maxproj.calendarpicker.Fragments.FragmentCalendarPicker;
 import com.maxproj.calendarpicker.Models.CalendarMonth;
+import com.maxproj.calendarpicker.Models.Options;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Models.CalendarWeek;
 import com.maxproj.calendarpicker.R;
@@ -157,4 +161,22 @@ public class MyConfig {
         }
 
     }
+
+    public static Builder builder;
+    public static Options options;
+
+    public static void optText(TextView v, String option, String origin){
+
+        if(option != null && option.length() > 0){
+            v.setText(option);
+            return;
+        }
+
+        if(origin != null && origin.length() > 0){
+            v.setText(origin);
+            return;
+        }
+
+    }
+
 }

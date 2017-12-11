@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import com.maxproj.calendarpicker.Config.MyConfig;
 import com.maxproj.calendarpicker.Fragments.FragmentCalendarPicker;
+import com.maxproj.calendarpicker.Models.Options;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 
 /**
@@ -12,29 +13,33 @@ import com.maxproj.calendarpicker.Models.YearMonthDay;
 
 public class Builder {
 
-    Activity activity;
-    FragmentCalendarPicker.CalendarPickerOnConfirm calendarPickerOnConfirm;
-
-    YearMonthDay preset;
+    private Activity activity;
+    private FragmentCalendarPicker.CalendarPickerOnConfirm calendarPickerOnConfirm;
 
 
     public Builder setPreset(YearMonthDay preset){
-        this.preset = preset;
+        MyConfig.options.preset = preset;
         return this;
     }
 
+    public Builder setTodayText(String todayText){
+        MyConfig.options.today = todayText;
+        return this;
+    }
 
 
     public Builder(Activity activity, FragmentCalendarPicker.CalendarPickerOnConfirm calendarPickerOnConfirm){
         this.activity = activity;
         this.calendarPickerOnConfirm = calendarPickerOnConfirm;
+        MyConfig.options = new Options();
     }
 
-    public Builder build(){
-        return this;
-    }
+//    public Builder build(){
+//        return this;
+//    }
 
     public void show(){
-        MyConfig.openCalendarPicker(activity, preset, calendarPickerOnConfirm);
+        MyConfig.builder = this;
+        MyConfig.openCalendarPicker(activity, MyConfig.options.preset, calendarPickerOnConfirm);
     }
 }
