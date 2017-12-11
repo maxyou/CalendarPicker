@@ -28,38 +28,44 @@
 
             <TextView
                 android:id="@+id/calendar_time_chooser_title"
-                android:layout_width="60dp"
                 android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_marginLeft="20dp"
                 android:gravity="center_vertical"
-                android:text="title"
+                android:text="Please Pick A Day"
                 android:textColor="#4366A0"
-                android:textSize="14sp" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/calendar_time_chooser_selected"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_button_bg_selected"
+                android:gravity="center"
                 android:text="selected"
-                android:textColor="#4366A0"
-                android:textSize="14sp" />
+                android:textColor="@color/White"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/calendar_time_chooser_today"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_button_bg_selected"
+                android:gravity="center"
                 android:text="today"
-                android:textColor="#4366A0"
-                android:textSize="14sp" />
+                android:textColor="@color/White"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -88,7 +94,7 @@
                 android:gravity="center"
                 android:text="cancel"
                 android:textColor="#4366A0"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/calendar_time_chooser_panel_confirm"
@@ -99,7 +105,7 @@
                 android:gravity="center"
                 android:text="confirm"
                 android:textColor="#4366A0"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
