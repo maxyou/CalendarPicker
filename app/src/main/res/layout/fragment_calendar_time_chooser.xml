@@ -81,7 +81,7 @@
             android:id="@+id/calendar_time_chooser_panel_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/Azure"
+            android:background="@color/calendar_confirm_bg"
             android:orientation="horizontal">
 
             <TextView
@@ -92,7 +92,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="cancel"
-                android:textColor="#4366A0"
+                android:textColor="@color/calendar_confirm_text"
                 android:textSize="16sp" />
 
             <TextView
@@ -103,7 +103,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="confirm"
-                android:textColor="#4366A0"
+                android:textColor="@color/calendar_confirm_text"
                 android:textSize="16sp" />
 
         </LinearLayout>

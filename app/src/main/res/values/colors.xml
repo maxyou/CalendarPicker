@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="calendar_title_bg">@color/White</color>
-    <color name="calendar_title_text">#222222</color>
+    <color name="calendar_title_text">@color/DimGray</color>
 
     <color name="calendar_today">@color/White</color>
     <color name="calendar_today_inactive">@color/White</color>
@@ -21,6 +21,9 @@
 
     <color name="month_title_bg">@color/White</color>
     <color name="month_title_text">#222222</color>
+
+    <color name="calendar_confirm_bg">@color/White</color>
+    <color name="calendar_confirm_text">@color/DimGray</color>
 
 
     <color name="calendar_in_week_index">#8834485E</color>
