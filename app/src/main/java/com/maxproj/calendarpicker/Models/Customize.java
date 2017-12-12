@@ -1,12 +1,16 @@
 package com.maxproj.calendarpicker.Models;
 
+import com.maxproj.calendarpicker.Builder;
+
 /**
  * Created by youhy on 17/12/11.
  */
 
-public class Options {
+public class Customize {
 
     public YearMonthDay preset;
+
+    public Builder.FormatMonthTitle formatMonthTitle;
 
     public String title_str;
     public int title_size;

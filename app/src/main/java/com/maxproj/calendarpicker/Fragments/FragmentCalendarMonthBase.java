@@ -87,7 +87,11 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
     public void updateCalendarPage() {
 
-        fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
+        if(MyConfig.customize != null && MyConfig.customize.formatMonthTitle != null){
+            fragment_calendar_year_month.setText(MyConfig.customize.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
+        }else{
+            fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
+        }
 
         viewCalendarWeekWithActivity_0.setViewCalendarWeek(calendarMonth.calendarWeeks.get(0), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);
         viewCalendarWeekWithActivity_1.setViewCalendarWeek(calendarMonth.calendarWeeks.get(1), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);

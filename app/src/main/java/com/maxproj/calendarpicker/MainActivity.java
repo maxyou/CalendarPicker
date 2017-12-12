@@ -35,9 +35,16 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(YearMonthDay yearMonthDay) {
                         MyConfig.uiToast("You pick "+yearMonthDay.year+"-"+yearMonthDay.month+"-"+yearMonthDay.day);
                     }
-                });
-                builder.setPreset(new YearMonthDay(2016, 7, 4));
-                builder.setTodayText("今天");
+                })
+                        .setPreset(new YearMonthDay(2016, 7, 4))
+                        .setMonthTitle(new Builder.FormatMonthTitle() {
+                            @Override
+                            public String setMonthTitle(int year, int month) {
+                                return ""+year+"年"+month+"月";
+                            }
+                        })
+                        .setTodayText("今天");
+
                 builder.show();
             }
         });
