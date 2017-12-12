@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         MyConfig.uiToast("You pick "+yearMonthDay.year+"-"+yearMonthDay.month+"-"+yearMonthDay.day);
                     }
                 })
-                        .setPreset(new YearMonthDay(2016, 7, 4))
+                        .setPreset(new YearMonthDay(2017, 5, 4))
                         .setMonthTitle(new Builder.FormatMonthTitle() {
                             @Override
                             public String setMonthTitle(int year, int month) {

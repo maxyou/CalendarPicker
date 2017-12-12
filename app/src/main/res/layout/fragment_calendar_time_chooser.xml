@@ -15,7 +15,6 @@
         android:id="@+id/calendar_time_chooser_layout"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:background="@color/Red"
         android:orientation="vertical"
         android:visibility="invisible">
 
@@ -29,10 +28,10 @@
 
             <TextView
                 android:id="@+id/calendar_time_chooser_title"
-                android:layout_height="match_parent"
                 android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="Please Pick A Day"
                 android:textColor="@color/calendar_title_text"
@@ -42,12 +41,12 @@
                 android:id="@+id/calendar_time_chooser_selected"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/shape_button_bg_selected"
                 android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:text="selected"
                 android:textColor="@color/calendar_current_month_day"
                 android:textSize="12sp" />
@@ -56,14 +55,14 @@
                 android:id="@+id/calendar_time_chooser_today"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/shape_button_bg_today"
                 android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:text="today"
                 android:textColor="@color/calendar_current_month_day"
                 android:textSize="12sp" />
@@ -73,8 +72,7 @@
         <FrameLayout
             android:id="@+id/calendar_time_chooser_viewpager_container"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="@color/Chocolate">
+            android:layout_height="300dp">
 
         </FrameLayout>
 
