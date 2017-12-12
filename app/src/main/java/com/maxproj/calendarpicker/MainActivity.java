@@ -43,9 +43,11 @@ public class MainActivity extends AppCompatActivity {
                                 return ""+year+"年"+month+"月";
                             }
                         })
+                        .setSelectedText("已选")
                         .setTodayText("今天");
 
                 builder.show();
+
             }
         });
 

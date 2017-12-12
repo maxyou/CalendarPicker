@@ -48,7 +48,7 @@
                 android:background="@drawable/shape_button_bg_selected"
                 android:gravity="center"
                 android:text="selected"
-                android:textColor="@color/White"
+                android:textColor="@color/calendar_current_month_day"
                 android:textSize="12sp" />
 
             <TextView
@@ -61,10 +61,10 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/shape_button_bg_selected"
+                android:background="@drawable/shape_button_bg_today"
                 android:gravity="center"
                 android:text="today"
-                android:textColor="@color/White"
+                android:textColor="@color/calendar_current_month_day"
                 android:textSize="12sp" />
 
         </LinearLayout>

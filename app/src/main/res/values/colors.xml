@@ -155,7 +155,6 @@
     <color name="Navy">#000080</color >
     <color name="Black">#000000</color >
     <color name="Black_transparent">#88000000</color >
-    <color name="sort_text">#666666</color >
     <color name="transparent">#00000000</color>
 
 </resources>

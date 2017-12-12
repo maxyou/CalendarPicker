@@ -45,7 +45,6 @@ public class Builder {
     public Builder(Activity activity, FragmentCalendarPicker.CalendarPickerOnConfirm calendarPickerOnConfirm){
         this.activity = activity;
         this.calendarPickerOnConfirm = calendarPickerOnConfirm;
-        MyConfig.customize = new Customize();
     }
 
 //    public Builder build(){
