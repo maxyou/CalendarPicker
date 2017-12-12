@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="M"
-            android:textColor="@color/calendar_monday_index"
+            android:textColor="@color/calendar_in_week_index"
             android:textSize="15sp" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="T"
-            android:textColor="@color/calendar_monday_index"
+            android:textColor="@color/calendar_in_week_index"
             android:textSize="15sp" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="W"
-            android:textColor="@color/calendar_monday_index"
+            android:textColor="@color/calendar_in_week_index"
             android:textSize="15sp" />
 
         <TextView
@@ -54,7 +54,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="T"
-            android:textColor="@color/calendar_monday_index"
+            android:textColor="@color/calendar_in_week_index"
             android:textSize="15sp" />
 
         <TextView
@@ -64,7 +64,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="F"
-            android:textColor="@color/calendar_monday_index"
+            android:textColor="@color/calendar_in_week_index"
             android:textSize="15sp" />
 
         <TextView
@@ -74,7 +74,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="S"
-            android:textColor="@color/calendar_monday_index"
+            android:textColor="@color/calendar_in_week_index"
             android:textSize="15sp" />
 
         <TextView
@@ -84,7 +84,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="S"
-            android:textColor="@color/calendar_monday_index"
+            android:textColor="@color/calendar_in_week_index"
             android:textSize="15sp" />
 
     </LinearLayout>

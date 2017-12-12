@@ -15,7 +15,7 @@
         android:id="@+id/calendar_time_chooser_layout"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:background="@color/LightGrey"
+        android:background="@color/Red"
         android:orientation="vertical"
         android:visibility="invisible">
 
@@ -23,6 +23,7 @@
             android:id="@+id/calendar_time_chooser_title_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@color/calendar_title_bg"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -34,7 +35,7 @@
                 android:layout_marginLeft="20dp"
                 android:gravity="center_vertical"
                 android:text="Please Pick A Day"
-                android:textColor="#4366A0"
+                android:textColor="@color/calendar_title_text"
                 android:textSize="18sp" />
 
             <TextView
