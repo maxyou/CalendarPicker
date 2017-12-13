@@ -3,6 +3,7 @@ package com.maxproj.calendarpicker.Views;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -72,20 +73,41 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
 
         if(calendarDay.day.getMonthOfYear() == highLightMonth){
 //            calendar_day_layout.setBackgroundColor(getResources().getColor(R.color.LightGrey));
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.calendar_current_month_day));
+            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_current));
         }else{
 //            calendar_day_layout.setBackgroundColor(Color.TRANSPARENT);
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.calendar_other_month_day));
+            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_other));
         }
 
         if(highLightDay != null && calendarDay.day.equals(highLightDay.day)){
+
+            /**
+             * 被选择
+             */
+
             calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_selected_circle));
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.White));
+            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_selected));
+            calendar_day_in_month.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.month_day_selected));
+
         }else if(calendarDay.day.equals(new LocalDate())){
+
+            /**
+             * 今天
+             */
+
             calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_today_circle));
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.White));
+            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_selected));
+            calendar_day_in_month.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.month_day_today));
+
         }else{
+
+            /**
+             * 普通日
+             */
+
             calendar_day_layout.setBackgroundColor(Color.TRANSPARENT);
+            calendar_day_in_month.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.month_day));
+
         }
 
         this.setOnClickListener(new OnClickListener() {

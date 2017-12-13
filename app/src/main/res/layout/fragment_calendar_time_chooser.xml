@@ -48,7 +48,7 @@
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:text="selected"
-                android:textColor="@color/calendar_current_month_day"
+                android:textColor="@color/calendar_title_selected_day"
                 android:textSize="12sp" />
 
             <TextView
@@ -64,7 +64,7 @@
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:text="today"
-                android:textColor="@color/calendar_current_month_day"
+                android:textColor="@color/calendar_title_today"
                 android:textSize="12sp" />
 
         </LinearLayout>

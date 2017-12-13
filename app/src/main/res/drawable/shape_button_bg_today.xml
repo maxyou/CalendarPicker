@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/calendar_today_bg" />
+    <solid android:color="@color/calendar_title_today_bg" />
     <corners android:radius="15dip"/>
 
 </shape>

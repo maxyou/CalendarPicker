@@ -7,28 +7,29 @@
     <color name="calendar_title_bg">@color/White</color>
     <color name="calendar_title_text">@color/DimGray</color>
 
-    <color name="calendar_today">@color/White</color>
-    <color name="calendar_today_inactive">@color/White</color>
-    <color name="calendar_today_bg">@color/PowderBlue</color>
-    <color name="calendar_today_bg_inactive">@color/PowderBlue</color>
+    <color name="calendar_title_today">@color/month_day_today</color>
+    <color name="calendar_title_today_bg">@color/month_day_today_bg</color>
 
-    <color name="calendar_selected_day">@color/White</color>
-    <color name="calendar_selected_day_inactive">@color/White</color>
-    <color name="calendar_selected_day_bg">@color/PaleTurquoise</color>
-    <color name="calendar_selected_day_bg_inactive">@color/PaleTurquoise</color>
+    <color name="calendar_title_selected_day">@color/month_day_selected</color>
+    <color name="calendar_title_selected_day_bg">@color/month_day_selected_bg</color>
 
-    <color name="month_base_bg">@color/Wheat</color>
+    <color name="month_base_bg">@color/BlanchedAlmond</color>
 
-    <color name="month_title_bg">@color/White</color>
+    <color name="month_title_bg">@color/transparent</color>
     <color name="month_title_text">#222222</color>
+
+    <color name="month_in_week_index">#8834485E</color>
+
+    <color name="month_day_current">@color/DimGray</color>
+    <color name="month_day_other">@color/LightGrey</color>
+
+    <color name="month_day_selected">@color/White</color>
+    <color name="month_day_selected_bg">@color/PaleGreen</color>
+    <color name="month_day_today">@color/White</color>
+    <color name="month_day_today_bg">@color/SkyBlue</color>
 
     <color name="calendar_confirm_bg">@color/White</color>
     <color name="calendar_confirm_text">@color/DimGray</color>
-
-
-    <color name="calendar_in_week_index">#8834485E</color>
-    <color name="calendar_current_month_day">#7C86A2</color>
-    <color name="calendar_other_month_day">#E1E4E7</color>
 
 
     <!-- origin color -->
