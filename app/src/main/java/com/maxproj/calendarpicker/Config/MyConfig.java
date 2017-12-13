@@ -119,7 +119,7 @@ public class MyConfig {
 
 
 
-    public static void openCalendarPicker(Activity activity, YearMonthDay preset, FragmentCalendarPicker.CalendarPickerOnConfirm calendarPickerOnConfirm) {
+    public static void openCalendarPicker(Activity activity, YearMonthDay preset, Builder.CalendarPickerOnConfirm calendarPickerOnConfirm) {
 
         FragmentCalendarPicker fragmentCalendarPicker = FragmentCalendarPicker.newInstance(
                 preset,

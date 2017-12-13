@@ -13,7 +13,7 @@ import com.maxproj.calendarpicker.Models.YearMonthDay;
 public class Builder {
 
     private Activity activity;
-    private FragmentCalendarPicker.CalendarPickerOnConfirm calendarPickerOnConfirm;
+    private CalendarPickerOnConfirm calendarPickerOnConfirm;
 
 
     /**
@@ -66,8 +66,11 @@ public class Builder {
      * Confirm部分
      */
 
+    public interface CalendarPickerOnConfirm {
+        void onComplete(YearMonthDay yearMonthDay);
+    }
 
-    public Builder(Activity activity, FragmentCalendarPicker.CalendarPickerOnConfirm calendarPickerOnConfirm){
+    public Builder(Activity activity, CalendarPickerOnConfirm calendarPickerOnConfirm){
         this.activity = activity;
         this.calendarPickerOnConfirm = calendarPickerOnConfirm;
     }

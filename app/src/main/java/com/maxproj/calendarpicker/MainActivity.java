@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                MyConfig.openCalendarPicker(MainActivity.this, new YearMonthDay(2016,7,4), null);
-                Builder builder = new Builder(MainActivity.this, new FragmentCalendarPicker.CalendarPickerOnConfirm() {
+                Builder builder = new Builder(MainActivity.this, new Builder.CalendarPickerOnConfirm() {
                     @Override
                     public void onComplete(YearMonthDay yearMonthDay) {
                         MyConfig.uiToast("You pick "+yearMonthDay.year+"-"+yearMonthDay.month+"-"+yearMonthDay.day);

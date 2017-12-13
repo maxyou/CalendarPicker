@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.maxproj.calendarpicker.Builder;
 import com.maxproj.calendarpicker.Config.MyConfig;
 import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
@@ -41,13 +42,11 @@ public class FragmentCalendarPicker extends FragmentBase {
     YearMonthDay yearMonthDayPreset;
     YearMonthDay yearMonthDaySelected;
 
-    public interface CalendarPickerOnConfirm {
-            void onComplete(YearMonthDay yearMonthDay);
-    }
-    public CalendarPickerOnConfirm calendarPickerOnConfirm;
+
+    public Builder.CalendarPickerOnConfirm calendarPickerOnConfirm;
 
 
-    public static FragmentCalendarPicker newInstance(YearMonthDay yearMonthDay, CalendarPickerOnConfirm calendarPickerOnConfirm) {
+    public static FragmentCalendarPicker newInstance(YearMonthDay yearMonthDay, Builder.CalendarPickerOnConfirm calendarPickerOnConfirm) {
 
         FragmentCalendarPicker f = new FragmentCalendarPicker();
         f.yearMonthDayPreset = yearMonthDay;
