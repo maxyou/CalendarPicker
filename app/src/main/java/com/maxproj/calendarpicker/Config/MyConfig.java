@@ -164,7 +164,7 @@ public class MyConfig {
     public static Builder builder;
     public static Customize customize;
 
-    public static void customizeTextView(TextView v, String customStr, String innerSetStr){
+    public static void customTextViewTxt(TextView v, String customStr, String innerSetStr){
 
         if(customStr != null && customStr.length() > 0){
             v.setText(customStr);
@@ -177,5 +177,28 @@ public class MyConfig {
         }
 
     }
+
+    public static void customTextViewMonthTitle(TextView v, String customStr, String innerSetStr){
+
+        if(customStr != null && customStr.length() > 0){
+            v.setText(customStr);
+            return;
+        }
+
+        if(innerSetStr != null && innerSetStr.length() > 0){
+            v.setText(innerSetStr);
+            return;
+        }
+
+    }
+
+    public static void customTextViewColor(TextView v, int custom, int inner){
+
+    }
+
+    public static void customTextViewSize(TextView v, int custom_sp, int inner){
+
+    }
+
 
 }

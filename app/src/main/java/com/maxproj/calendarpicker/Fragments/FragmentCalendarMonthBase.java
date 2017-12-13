@@ -87,7 +87,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
     public void updateCalendarPage() {
 
-        if(MyConfig.customize != null && MyConfig.customize.formatMonthTitle != null){
+        if(MyConfig.customize.formatMonthTitle != null){
             fragment_calendar_year_month.setText(MyConfig.customize.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
         }else{
             fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
