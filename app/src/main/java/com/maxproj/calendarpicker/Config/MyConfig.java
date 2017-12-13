@@ -178,19 +178,6 @@ public class MyConfig {
 
     }
 
-    public static void customTextViewMonthTitle(TextView v, String customStr, String innerSetStr){
-
-        if(customStr != null && customStr.length() > 0){
-            v.setText(customStr);
-            return;
-        }
-
-        if(innerSetStr != null && innerSetStr.length() > 0){
-            v.setText(innerSetStr);
-            return;
-        }
-
-    }
 
     public static void customTextViewColor(TextView v, int custom, int inner){
 

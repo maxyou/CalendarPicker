@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                                 return ""+year+"年"+month+"月";
                             }
                         })
+                        .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
                         .setSelectedText("已选")
                         .setTodayText("今天");
 

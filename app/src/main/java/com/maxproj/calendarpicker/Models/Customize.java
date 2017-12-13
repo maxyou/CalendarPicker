@@ -34,7 +34,7 @@ public class Customize {
     public int year_month_color;
     public int year_month_bg_color;
 
-    public String capital[];
+    public String weekIndex[];
     public int capital_color;
     public int capital_bg_color;
 

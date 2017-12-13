@@ -22,6 +22,14 @@ import de.greenrobot.event.EventBus;
 
 public class FragmentCalendarMonthBase extends FragmentBase {
 
+    TextView fragment_calendar_base_day_index_1;
+    TextView fragment_calendar_base_day_index_2;
+    TextView fragment_calendar_base_day_index_3;
+    TextView fragment_calendar_base_day_index_4;
+    TextView fragment_calendar_base_day_index_5;
+    TextView fragment_calendar_base_day_index_6;
+    TextView fragment_calendar_base_day_index_7;
+
     ViewCalendarWeekWithActivity viewCalendarWeekWithActivity_0;
     ViewCalendarWeekWithActivity viewCalendarWeekWithActivity_1;
     ViewCalendarWeekWithActivity viewCalendarWeekWithActivity_2;
@@ -73,6 +81,14 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
         fragment_calendar_year_month = (TextView)v.findViewById(R.id.fragment_calendar_year_month);
 
+        fragment_calendar_base_day_index_1 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_1);
+        fragment_calendar_base_day_index_2 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_2);
+        fragment_calendar_base_day_index_3 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_3);
+        fragment_calendar_base_day_index_4 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_4);
+        fragment_calendar_base_day_index_5 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_5);
+        fragment_calendar_base_day_index_6 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_6);
+        fragment_calendar_base_day_index_7 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_7);
+
         viewCalendarWeekWithActivity_0 = (ViewCalendarWeekWithActivity) v.findViewById(R.id.fragment_calendar_base_week_0);
         viewCalendarWeekWithActivity_1 = (ViewCalendarWeekWithActivity) v.findViewById(R.id.fragment_calendar_base_week_1);
         viewCalendarWeekWithActivity_2 = (ViewCalendarWeekWithActivity) v.findViewById(R.id.fragment_calendar_base_week_2);
@@ -92,6 +108,16 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         }else{
             fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
         }
+
+        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_1, MyConfig.customize.weekIndex[0], null);
+        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_2, MyConfig.customize.weekIndex[1], null);
+        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_3, MyConfig.customize.weekIndex[2], null);
+        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_4, MyConfig.customize.weekIndex[3], null);
+        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_5, MyConfig.customize.weekIndex[4], null);
+        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_6, MyConfig.customize.weekIndex[5], null);
+        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_7, MyConfig.customize.weekIndex[6], null);
+
+
 
         viewCalendarWeekWithActivity_0.setViewCalendarWeek(calendarMonth.calendarWeeks.get(0), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);
         viewCalendarWeekWithActivity_1.setViewCalendarWeek(calendarMonth.calendarWeeks.get(1), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);
