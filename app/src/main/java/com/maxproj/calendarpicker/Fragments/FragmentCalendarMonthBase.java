@@ -109,14 +109,15 @@ public class FragmentCalendarMonthBase extends FragmentBase {
             fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
         }
 
-        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_1, MyConfig.customize.weekIndex[0], null);
-        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_2, MyConfig.customize.weekIndex[1], null);
-        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_3, MyConfig.customize.weekIndex[2], null);
-        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_4, MyConfig.customize.weekIndex[3], null);
-        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_5, MyConfig.customize.weekIndex[4], null);
-        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_6, MyConfig.customize.weekIndex[5], null);
-        MyConfig.customTextViewTxt(fragment_calendar_base_day_index_7, MyConfig.customize.weekIndex[6], null);
-
+        if(MyConfig.customize.weekIndex != null && MyConfig.customize.weekIndex.length == 7) {
+            MyConfig.customTextViewTxt(fragment_calendar_base_day_index_1, MyConfig.customize.weekIndex[0], null);
+            MyConfig.customTextViewTxt(fragment_calendar_base_day_index_2, MyConfig.customize.weekIndex[1], null);
+            MyConfig.customTextViewTxt(fragment_calendar_base_day_index_3, MyConfig.customize.weekIndex[2], null);
+            MyConfig.customTextViewTxt(fragment_calendar_base_day_index_4, MyConfig.customize.weekIndex[3], null);
+            MyConfig.customTextViewTxt(fragment_calendar_base_day_index_5, MyConfig.customize.weekIndex[4], null);
+            MyConfig.customTextViewTxt(fragment_calendar_base_day_index_6, MyConfig.customize.weekIndex[5], null);
+            MyConfig.customTextViewTxt(fragment_calendar_base_day_index_7, MyConfig.customize.weekIndex[6], null);
+        }
 
 
         viewCalendarWeekWithActivity_0.setViewCalendarWeek(calendarMonth.calendarWeeks.get(0), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);
