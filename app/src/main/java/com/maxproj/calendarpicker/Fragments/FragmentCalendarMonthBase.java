@@ -1,6 +1,7 @@
 package com.maxproj.calendarpicker.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,6 @@ import com.maxproj.calendarpicker.Models.CalendarMonth;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
 import com.maxproj.calendarpicker.Config.MyConfig;
-import com.maxproj.calendarpicker.Config.MyLog;
 import com.maxproj.calendarpicker.Views.ViewCalendarDayWithActivity;
 import com.maxproj.calendarpicker.Views.ViewCalendarWeekWithActivity;
 
@@ -67,7 +67,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         if(eventCalendarSelectDay != null) {
             daySelected.copy(eventCalendarSelectDay.calendarDay);
 
-            MyLog.d("","EventCalendarSelectDay: monthbase ");
+            Log.d("","EventCalendarSelectDay: monthbase ");
 
         }else{
             daySelected.copy(null);
@@ -76,7 +76,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        MyLog.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
+        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
         View v = inflater.inflate(R.layout.fragment_calendar_base, null);
 
         fragment_calendar_year_month = (TextView)v.findViewById(R.id.fragment_calendar_year_month);

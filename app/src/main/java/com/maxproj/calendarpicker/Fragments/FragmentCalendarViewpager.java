@@ -3,6 +3,7 @@ package com.maxproj.calendarpicker.Fragments;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,6 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
-import com.maxproj.calendarpicker.Config.MyLog;
 
 
 public class FragmentCalendarViewpager extends FragmentBase {
@@ -77,7 +77,7 @@ public class FragmentCalendarViewpager extends FragmentBase {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        MyLog.d("","FragmentCalendarChooserDialog: FragmentCalendarViewpager.onCreateView");
+        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarViewpager.onCreateView");
         View v = inflater.inflate(R.layout.fragment_calendar_viewpager, null);
 
         viewPager = (ViewPager)v.findViewById(R.id.calendar_viewpager);

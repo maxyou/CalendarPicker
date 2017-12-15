@@ -1,9 +1,9 @@
 package com.maxproj.calendarpicker.Fragments;
 
 import android.app.FragmentTransaction;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +17,6 @@ import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
 import com.maxproj.calendarpicker.R;
-import com.maxproj.calendarpicker.Config.MyLog;
 
 import de.greenrobot.event.EventBus;
 
@@ -57,7 +56,7 @@ public class FragmentCalendarPicker extends FragmentBase {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        MyLog.d("","FragmentCalendarChooserDialog: FragmentCalendarChooserDialog.onCreateView");
+        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarChooserDialog.onCreateView");
         View v = inflater.inflate(R.layout.fragment_calendar_time_chooser, null);
 
         findViews(v);
@@ -176,7 +175,6 @@ public class FragmentCalendarPicker extends FragmentBase {
 
     private void findViews(View v) {
 
-
         calendar_time_chooser_mask = (View) v.findViewById(R.id.calendar_time_chooser_mask);
         calendar_time_chooser_layout = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_layout);
         calendar_time_chooser_title_layout = (LinearLayout) v.findViewById(R.id.calendar_time_chooser_title_layout);
@@ -189,7 +187,6 @@ public class FragmentCalendarPicker extends FragmentBase {
         calendar_time_chooser_viewpager_container = (FrameLayout) v.findViewById(R.id.calendar_time_chooser_viewpager_container);
 
         makeOptions();
-
 
         calendar_time_chooser_viewpager = new FragmentCalendarViewpager();
 //        calendar_time_chooser_blocks_calendar_viewpager.dayInViewPagerOnClickListener = new FragmentCalendarViewpager.DayInViewPagerOnClickListener() {

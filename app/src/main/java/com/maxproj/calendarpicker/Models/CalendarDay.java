@@ -1,6 +1,6 @@
 package com.maxproj.calendarpicker.Models;
 
-import com.maxproj.calendarpicker.Config.MyLog;
+import android.util.Log;
 
 import org.joda.time.LocalDate;
 
@@ -40,16 +40,16 @@ public class CalendarDay {
     public void copy(CalendarDay calendarDay){
 
         if(calendarDay == null){
-            MyLog.d("","EventCalendarSelectDay: CalendarDay copy null ");
+            Log.d("","EventCalendarSelectDay: CalendarDay copy null ");
             this.day = null;
             this.have_activity = false;
             return;
         }
 
         if(calendarDay.day == null){
-            MyLog.d("", "EventCalendarSelectDay: CalendarDay copy null 2");
+            Log.d("", "EventCalendarSelectDay: CalendarDay copy null 2");
         }else {
-            MyLog.d("", "EventCalendarSelectDay: CalendarDay copy: " + calendarDay.day.toString());
+            Log.d("", "EventCalendarSelectDay: CalendarDay copy: " + calendarDay.day.toString());
         }
         this.day = calendarDay.day;
         this.have_activity = calendarDay.have_activity;

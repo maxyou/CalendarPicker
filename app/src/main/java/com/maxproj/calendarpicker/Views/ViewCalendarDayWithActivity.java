@@ -57,11 +57,11 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
         this.mDayOnClickListener = dayOnClickListener;
 
 //        if(calendarDay == null){
-//            MyLog.d("","EventCalendarSelectDay: ViewCalendarDayWithActivity calendarDay == null");
+//            Log.d("","EventCalendarSelectDay: ViewCalendarDayWithActivity calendarDay == null");
 //        }else if(calendarDay.day == null){
-//            MyLog.d("","EventCalendarSelectDay: ViewCalendarDayWithActivity calendarDay.day == null");
+//            Log.d("","EventCalendarSelectDay: ViewCalendarDayWithActivity calendarDay.day == null");
 //        }else{
-//            MyLog.d("","EventCalendarSelectDay: ViewCalendarDayWithActivity calendarDay.day " + calendarDay.day.toString());
+//            Log.d("","EventCalendarSelectDay: ViewCalendarDayWithActivity calendarDay.day " + calendarDay.day.toString());
 //        }
         calendar_day_in_month.setText(""+calendarDay.day.getDayOfMonth());
 
