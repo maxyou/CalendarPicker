@@ -63,6 +63,21 @@ public class Builder {
         return this;
     }
 
+
+    public Builder setSelectedSize(int selectedSize){
+        MyConfig.customize.selectedSize = selectedSize;
+        return this;
+    }
+
+    public Builder setSelectedColor(int selectedColor){
+        MyConfig.customize.selectedColor = selectedColor;
+        return this;
+    }
+
+    public Builder setSelectedBgColor(int selectedBgColor){
+        MyConfig.customize.selectedBgColor = selectedBgColor;
+        return this;
+    }
     /**
      * Month Title部分
      */

@@ -1,5 +1,6 @@
 package com.maxproj.calendarpicker;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                         .setPromptText("请选择日期")
+                        .setPromptColor(Color.RED)
+                        .setPromptBgColor(Color.YELLOW)
+                        .setPromptSize(14)
                         .setPreset(new YearMonthDay(2017, 12, 4))
                         .setMonthTitle(new Builder.FormatMonthTitle() {
                             @Override

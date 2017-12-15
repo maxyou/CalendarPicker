@@ -3,8 +3,12 @@ package com.maxproj.calendarpicker.Config;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.TypedValue;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -164,27 +168,44 @@ public class MyConfig {
     public static Builder builder;
     public static Customize customize;
 
-    public static void customTextViewTxt(TextView v, String customStr, String innerSetStr){
+    public static void setTextViewTxt(TextView v, String customStr){
 
-        if(customStr != null && customStr.length() > 0){
+        if(customStr != null){
             v.setText(customStr);
             return;
         }
 
-        if(innerSetStr != null && innerSetStr.length() > 0){
-            v.setText(innerSetStr);
-            return;
+    }
+
+
+    public static void setTextViewColor(TextView v, Integer customColor){
+        if(customColor != null) {
+            v.setTextColor(customColor);
         }
-
     }
 
-
-    public static void customTextViewColor(TextView v, int custom, int inner){
-
+    public static void setTextViewBgColor(TextView v, Integer customColor){
+        if(customColor != null) {
+            v.setBackgroundColor(customColor);
+        }
     }
 
-    public static void customTextViewSize(TextView v, int custom_sp, int inner){
+    public static void setLayoutBgColor(LinearLayout v, Integer customColor){
+        if(customColor != null) {
+            v.setBackgroundColor(customColor);
+        }
+    }
 
+    public static void setShapeDrawableColor(GradientDrawable v, Integer customColor){
+        if(customColor != null) {
+            v.setColor(customColor);
+        }
+    }
+
+    public static void setTextViewSize(TextView v, Integer custom_size_sp){
+        if(custom_size_sp != null) {
+            v.setTextSize(TypedValue.COMPLEX_UNIT_SP, custom_size_sp);
+        }
     }
 
 

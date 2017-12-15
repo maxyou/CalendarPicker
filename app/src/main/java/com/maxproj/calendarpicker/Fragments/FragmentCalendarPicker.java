@@ -1,6 +1,9 @@
 package com.maxproj.calendarpicker.Fragments;
 
 import android.app.FragmentTransaction;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -205,11 +208,21 @@ public class FragmentCalendarPicker extends FragmentBase {
 
     private void makeOptions(){
 
-        MyConfig.customTextViewTxt(calendar_time_chooser_title, MyConfig.customize.promptText, null);
-        MyConfig.customTextViewTxt(calendar_time_chooser_today, MyConfig.customize.todayText, null);
-        MyConfig.customTextViewTxt(calendar_time_chooser_selected, MyConfig.customize.selectedText, null);
-        MyConfig.customTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelText, null);
-        MyConfig.customTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmText, null);
+        MyConfig.setTextViewTxt(calendar_time_chooser_title, MyConfig.customize.promptText);
+        MyConfig.setTextViewSize(calendar_time_chooser_title, MyConfig.customize.promptSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_title, MyConfig.customize.promptColor);
+        MyConfig.setLayoutBgColor(calendar_time_chooser_title_layout, MyConfig.customize.promptBgColor);
+
+        MyConfig.setTextViewTxt(calendar_time_chooser_today, MyConfig.customize.todayText);
+        MyConfig.setTextViewSize(calendar_time_chooser_today, MyConfig.customize.todaySize);
+        MyConfig.setTextViewColor(calendar_time_chooser_today, MyConfig.customize.todayColor);
+//        MyConfig.setShapeDrawableColor((GradientDrawable)calendar_time_chooser_today.getBackground(), MyConfig.customize.todayBgColor);
+
+        MyConfig.setTextViewTxt(calendar_time_chooser_selected, MyConfig.customize.selectedText);
+
+
+        MyConfig.setTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelText);
+        MyConfig.setTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmText);
 
     }
 

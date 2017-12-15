@@ -12,31 +12,35 @@ public class Customize {
      * Calendar Prompt部分
      */
     public String promptText;
-    public int promptSize;
-    public int promptColor;
-    public int promptBgColor;
+    public Integer promptSize;
+    public Integer promptColor;
+    public Integer promptBgColor;
 
     public String todayText;
-    public int todaySize;
-    public int todayColor;
-    public int todayBgColor;
+    public Integer todaySize;
+    public Integer todayColor;
+    public Integer todayBgColor;
+
     public String selectedText;
+    public Integer selectedSize;
+    public Integer selectedColor;
+    public Integer selectedBgColor;
 
     /**
      * Month Title部分
      */
     public Builder.FormatMonthTitle formatMonthTitle;
     public String yearMonth;
-    public int yearMonthSize;
-    public int yearMonthColor;
-    public int yearMonthBgColor;
+    public Integer yearMonthSize;
+    public Integer yearMonthColor;
+    public Integer yearMonthBgColor;
 
     /**
      * Week Index部分
      */
     public String weekIndex[];
-    public int weekColor;
-    public int weekBgColor;
+    public Integer weekColor;
+    public Integer weekBgColor;
 
 
     /**
@@ -44,21 +48,21 @@ public class Customize {
      */
     public YearMonthDay preset;
 
-    public int dayColor;
-    public int dayBgColor;
-    public int dayOtherMonthColor;
-    public int dayOtherMonthBgColor;
-    public int dayTodayColor;
-    public int daySelectedColor;
+    public Integer dayColor;
+    public Integer dayBgColor;
+    public Integer dayOtherMonthColor;
+    public Integer dayOtherMonthBgColor;
+    public Integer dayTodayColor;
+    public Integer daySelectedColor;
 
     /**
      * Confirm部分
      */
     public String cancelText;
     public String confirmText;
-    public int confirmSize;
-    public int confirmColor;
-    public int confirmBgColor;
+    public Integer confirmSize;
+    public Integer confirmColor;
+    public Integer confirmBgColor;
 
 
 }
