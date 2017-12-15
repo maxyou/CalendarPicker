@@ -16,11 +16,11 @@ public class Customize {
     public int promptColor;
     public int promptBgColor;
 
-    public String selectedText;
     public String todayText;
     public int todaySize;
     public int todayColor;
     public int todayBgColor;
+    public String selectedText;
 
     /**
      * Month Title部分

@@ -23,14 +23,43 @@ public class Builder {
         return this;
     }
 
+    public Builder setPromptSize(int promptSize){
+        MyConfig.customize.promptSize = promptSize;
+        return this;
+    }
 
-    public Builder setSelectedText(String selectedText){
-        MyConfig.customize.selectedText = selectedText;
+    public Builder setPromptColor(int promptColor){
+        MyConfig.customize.promptColor = promptColor;
+        return this;
+    }
+
+    public Builder setPromptBgColor(int promptBgColor){
+        MyConfig.customize.promptBgColor = promptBgColor;
         return this;
     }
 
     public Builder setTodayText(String todayText){
         MyConfig.customize.todayText = todayText;
+        return this;
+    }
+
+    public Builder setTodaySize(int todaySize){
+        MyConfig.customize.todaySize = todaySize;
+        return this;
+    }
+
+    public Builder setTodayColor(int todayColor){
+        MyConfig.customize.todayColor = todayColor;
+        return this;
+    }
+
+    public Builder setTodayBgColor(int todayBgColor){
+        MyConfig.customize.todayBgColor = todayBgColor;
+        return this;
+    }
+
+    public Builder setSelectedText(String selectedText){
+        MyConfig.customize.selectedText = selectedText;
         return this;
     }
 
