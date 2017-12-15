@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         button_preset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                MyConfig.openCalendarPicker(MainActivity.this, new YearMonthDay(2016,7,4), null);
+
                 Builder builder = new Builder(MainActivity.this, new Builder.CalendarPickerOnConfirm() {
                     @Override
                     public void onComplete(YearMonthDay yearMonthDay) {
@@ -41,6 +41,20 @@ public class MainActivity extends AppCompatActivity {
                         .setPromptColor(Color.RED)
                         .setPromptBgColor(Color.YELLOW)
                         .setPromptSize(14)
+
+                        .setTodayText("今天")
+                        .setTodaySize(16)
+                        .setTodayColor(Color.RED)
+                        .setTodayBgColor(Color.MAGENTA)
+
+                        .setSelectedText("已选")
+                        .setSelectedSize(12)
+                        .setSelectedColor(Color.LTGRAY)
+                        .setSelectedBgColor(Color.BLACK)
+
+                        .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
+                        .setCancelText("取消")
+                        .setConfirmText("确定")
                         .setPreset(new YearMonthDay(2017, 12, 4))
                         .setMonthTitle(new Builder.FormatMonthTitle() {
                             @Override
@@ -48,11 +62,7 @@ public class MainActivity extends AppCompatActivity {
                                 return ""+year+"年"+month+"月";
                             }
                         })
-                        .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
-                        .setCancelText("取消")
-                        .setConfirmText("确定")
-                        .setSelectedText("已选")
-                        .setTodayText("今天");
+                        ;
 
                 builder.show();
 

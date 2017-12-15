@@ -3,6 +3,8 @@ package com.maxproj.calendarpicker.Config;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.os.Handler;
@@ -196,9 +198,15 @@ public class MyConfig {
         }
     }
 
-    public static void setShapeDrawableColor(GradientDrawable v, Integer customColor){
+    public static void setDrawableColor(Drawable v, Integer customColor){
         if(customColor != null) {
-            v.setColor(customColor);
+            if (v instanceof ShapeDrawable) {
+                ((ShapeDrawable)v).getPaint().setColor(customColor);
+            } else if (v instanceof GradientDrawable) {
+                ((GradientDrawable)v).setColor(customColor);
+            } else if (v instanceof ColorDrawable) {
+                ((ColorDrawable)v).setColor(customColor);
+            }
         }
     }
 

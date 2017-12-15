@@ -1,9 +1,7 @@
 package com.maxproj.calendarpicker.Fragments;
 
 import android.app.FragmentTransaction;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -216,9 +214,12 @@ public class FragmentCalendarPicker extends FragmentBase {
         MyConfig.setTextViewTxt(calendar_time_chooser_today, MyConfig.customize.todayText);
         MyConfig.setTextViewSize(calendar_time_chooser_today, MyConfig.customize.todaySize);
         MyConfig.setTextViewColor(calendar_time_chooser_today, MyConfig.customize.todayColor);
-//        MyConfig.setShapeDrawableColor((GradientDrawable)calendar_time_chooser_today.getBackground(), MyConfig.customize.todayBgColor);
+        MyConfig.setDrawableColor(calendar_time_chooser_today.getBackground(), MyConfig.customize.todayBgColor);
 
         MyConfig.setTextViewTxt(calendar_time_chooser_selected, MyConfig.customize.selectedText);
+        MyConfig.setTextViewSize(calendar_time_chooser_selected, MyConfig.customize.selectedSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_selected, MyConfig.customize.selectedColor);
+        MyConfig.setDrawableColor(calendar_time_chooser_selected.getBackground(), MyConfig.customize.selectedBgColor);
 
 
         MyConfig.setTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelText);
