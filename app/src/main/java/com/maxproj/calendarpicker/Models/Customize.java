@@ -9,34 +9,34 @@ import com.maxproj.calendarpicker.Builder;
 public class Customize {
 
     /**
-     * Calendar Title部分
+     * Calendar Prompt部分
      */
-    public String title_str;
-    public int title_size;
-    public int title_color;
-    public int title_bg_color;
+    public String promptText;
+    public int promptSize;
+    public int promptColor;
+    public int promptBgColor;
 
-    public String selected;
-    public String today;
-    public int today_size;
-    public int today_color;
-    public int today_bg_color;
+    public String selectedText;
+    public String todayText;
+    public int todaySize;
+    public int todayColor;
+    public int todayBgColor;
 
     /**
      * Month Title部分
      */
     public Builder.FormatMonthTitle formatMonthTitle;
-    public String year_month;
-    public int year_month_size;
-    public int year_month_color;
-    public int year_month_bg_color;
+    public String yearMonth;
+    public int yearMonthSize;
+    public int yearMonthColor;
+    public int yearMonthBgColor;
 
     /**
      * Week Index部分
      */
     public String weekIndex[];
-    public int capital_color;
-    public int capital_bg_color;
+    public int weekColor;
+    public int weekBgColor;
 
 
     /**
@@ -44,21 +44,21 @@ public class Customize {
      */
     public YearMonthDay preset;
 
-    public int day_color;
-    public int day_bg_color;
-    public int day_other_month_color;
-    public int day_other_month_bg_color;
-    public int day_today_color;
-    public int day_selected_color;
+    public int dayColor;
+    public int dayBgColor;
+    public int dayOtherMonthColor;
+    public int dayOtherMonthBgColor;
+    public int dayTodayColor;
+    public int daySelectedColor;
 
     /**
      * Confirm部分
      */
-    public String cancel;
-    public String confirm;
-    public int confirm_size;
-    public int confirm_color;
-    public int confirm_bg_color;
+    public String cancelText;
+    public String confirmText;
+    public int confirmSize;
+    public int confirmColor;
+    public int confirmBgColor;
 
 
 }

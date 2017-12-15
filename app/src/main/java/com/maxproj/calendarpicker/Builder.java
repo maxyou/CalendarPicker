@@ -3,7 +3,6 @@ package com.maxproj.calendarpicker;
 import android.app.Activity;
 
 import com.maxproj.calendarpicker.Config.MyConfig;
-import com.maxproj.calendarpicker.Fragments.FragmentCalendarPicker;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 
 /**
@@ -17,15 +16,21 @@ public class Builder {
 
 
     /**
-     * Calendar Title部分
+     * Calendar Prompt部分
      */
+    public Builder setPromptText(String promptText){
+        MyConfig.customize.promptText = promptText;
+        return this;
+    }
+
+
     public Builder setSelectedText(String selectedText){
-        MyConfig.customize.selected = selectedText;
+        MyConfig.customize.selectedText = selectedText;
         return this;
     }
 
     public Builder setTodayText(String todayText){
-        MyConfig.customize.today = todayText;
+        MyConfig.customize.todayText = todayText;
         return this;
     }
 
@@ -67,12 +72,12 @@ public class Builder {
      */
 
     public Builder setCancelText(String cancelText){
-        MyConfig.customize.cancel = cancelText;
+        MyConfig.customize.cancelText = cancelText;
         return this;
     }
 
     public Builder setConfirmText(String confirmText){
-        MyConfig.customize.confirm = confirmText;
+        MyConfig.customize.confirmText = confirmText;
         return this;
     }
 

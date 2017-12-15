@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         MyConfig.uiToast("You pick "+yearMonthDay.year+"-"+yearMonthDay.month+"-"+yearMonthDay.day);
                     }
                 })
+                        .setPromptText("请选择日期")
                         .setPreset(new YearMonthDay(2017, 12, 4))
                         .setMonthTitle(new Builder.FormatMonthTitle() {
                             @Override

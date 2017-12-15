@@ -205,10 +205,11 @@ public class FragmentCalendarPicker extends FragmentBase {
 
     private void makeOptions(){
 
-        MyConfig.customTextViewTxt(calendar_time_chooser_today, MyConfig.customize.today, null);
-        MyConfig.customTextViewTxt(calendar_time_chooser_selected, MyConfig.customize.selected, null);
-        MyConfig.customTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancel, null);
-        MyConfig.customTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.customize.confirm, null);
+        MyConfig.customTextViewTxt(calendar_time_chooser_title, MyConfig.customize.promptText, null);
+        MyConfig.customTextViewTxt(calendar_time_chooser_today, MyConfig.customize.todayText, null);
+        MyConfig.customTextViewTxt(calendar_time_chooser_selected, MyConfig.customize.selectedText, null);
+        MyConfig.customTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelText, null);
+        MyConfig.customTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmText, null);
 
     }
 
