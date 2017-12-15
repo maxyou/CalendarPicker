@@ -42,19 +42,28 @@ public class MainActivity extends AppCompatActivity {
                         .setPromptBgColor(Color.YELLOW)
                         .setPromptSize(14)
 
-                        .setTodayText("今天")
-                        .setTodaySize(16)
-                        .setTodayColor(Color.RED)
-                        .setTodayBgColor(Color.MAGENTA)
-
                         .setSelectedText("已选")
                         .setSelectedSize(12)
                         .setSelectedColor(Color.LTGRAY)
                         .setSelectedBgColor(Color.BLACK)
 
+                        .setTodayText("今天")
+                        .setTodaySize(16)
+                        .setTodayColor(Color.RED)
+                        .setTodayBgColor(Color.GREEN)
+
                         .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
+                        
                         .setCancelText("取消")
+                        .setCancelSize(12)
+                        .setCancelColor(Color.LTGRAY)
+                        .setCancelBgColor(Color.BLACK)
+                        
                         .setConfirmText("确定")
+                        .setConfirmSize(16)
+                        .setConfirmColor(Color.RED)
+                        .setConfirmBgColor(Color.GREEN)
+
                         .setPreset(new YearMonthDay(2017, 12, 4))
                         .setMonthTitle(new Builder.FormatMonthTitle() {
                             @Override

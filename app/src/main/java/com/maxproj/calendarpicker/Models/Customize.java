@@ -59,6 +59,9 @@ public class Customize {
      * Confirm部分
      */
     public String cancelText;
+    public Integer cancelSize;
+    public Integer cancelColor;
+    public Integer cancelBgColor;
     public String confirmText;
     public Integer confirmSize;
     public Integer confirmColor;

@@ -179,6 +179,11 @@ public class MyConfig {
 
     }
 
+    public static void setTextViewSize(TextView v, Integer custom_size_sp){
+        if(custom_size_sp != null) {
+            v.setTextSize(TypedValue.COMPLEX_UNIT_SP, custom_size_sp);
+        }
+    }
 
     public static void setTextViewColor(TextView v, Integer customColor){
         if(customColor != null) {
@@ -210,11 +215,6 @@ public class MyConfig {
         }
     }
 
-    public static void setTextViewSize(TextView v, Integer custom_size_sp){
-        if(custom_size_sp != null) {
-            v.setTextSize(TypedValue.COMPLEX_UNIT_SP, custom_size_sp);
-        }
-    }
 
 
 }

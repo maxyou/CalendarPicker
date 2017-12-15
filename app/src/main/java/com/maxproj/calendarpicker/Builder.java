@@ -78,6 +78,7 @@ public class Builder {
         MyConfig.customize.selectedBgColor = selectedBgColor;
         return this;
     }
+    
     /**
      * Month Title部分
      */
@@ -120,11 +121,41 @@ public class Builder {
         return this;
     }
 
+    public Builder setCancelSize(int cancelSize){
+        MyConfig.customize.cancelSize = cancelSize;
+        return this;
+    }
+
+    public Builder setCancelColor(int cancelColor){
+        MyConfig.customize.cancelColor = cancelColor;
+        return this;
+    }
+
+    public Builder setCancelBgColor(int cancelBgColor){
+        MyConfig.customize.cancelBgColor = cancelBgColor;
+        return this;
+    }
+
+
     public Builder setConfirmText(String confirmText){
         MyConfig.customize.confirmText = confirmText;
         return this;
     }
 
+    public Builder setConfirmSize(int confirmSize){
+        MyConfig.customize.confirmSize = confirmSize;
+        return this;
+    }
+
+    public Builder setConfirmColor(int confirmColor){
+        MyConfig.customize.confirmColor = confirmColor;
+        return this;
+    }
+
+    public Builder setConfirmBgColor(int confirmBgColor){
+        MyConfig.customize.confirmBgColor = confirmBgColor;
+        return this;
+    }
 
 
 

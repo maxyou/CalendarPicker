@@ -221,9 +221,15 @@ public class FragmentCalendarPicker extends FragmentBase {
         MyConfig.setTextViewColor(calendar_time_chooser_selected, MyConfig.customize.selectedColor);
         MyConfig.setDrawableColor(calendar_time_chooser_selected.getBackground(), MyConfig.customize.selectedBgColor);
 
-
         MyConfig.setTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelText);
+        MyConfig.setTextViewSize(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelColor);
+        MyConfig.setTextViewBgColor(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelBgColor);        
+
         MyConfig.setTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmText);
+        MyConfig.setTextViewSize(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmColor);
+        MyConfig.setTextViewBgColor(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmBgColor);
 
     }
 
