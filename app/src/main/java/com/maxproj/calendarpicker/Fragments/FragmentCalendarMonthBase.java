@@ -103,21 +103,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
     public void updateCalendarPage() {
 
-        if(MyConfig.customize.formatMonthTitle != null){
-            fragment_calendar_year_month.setText(MyConfig.customize.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
-        }else{
-            fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
-        }
-
-        if(MyConfig.customize.weekIndex != null && MyConfig.customize.weekIndex.length == 7) {
-            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_1, MyConfig.customize.weekIndex[0]);
-            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_2, MyConfig.customize.weekIndex[1]);
-            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_3, MyConfig.customize.weekIndex[2]);
-            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_4, MyConfig.customize.weekIndex[3]);
-            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_5, MyConfig.customize.weekIndex[4]);
-            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_6, MyConfig.customize.weekIndex[5]);
-            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_7, MyConfig.customize.weekIndex[6]);
-        }
+        makeCustoms();
 
 
         viewCalendarWeekWithActivity_0.setViewCalendarWeek(calendarMonth.calendarWeeks.get(0), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);
@@ -136,6 +122,54 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         } else {
             viewCalendarWeekWithActivity_5.setViewCalendarWeek(null, calendarMonth.firstDayOfCurrentMonth.getMonthOfYear(), daySelected, dayOnClickListener);
         }
+    }
+
+    private void makeCustoms() {
+
+
+        if(MyConfig.custom.formatMonthTitle != null){
+            fragment_calendar_year_month.setText(MyConfig.custom.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
+        }else{
+            fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
+        }
+        MyConfig.setTextViewSize(fragment_calendar_year_month, MyConfig.custom.monthTitleSize);
+        MyConfig.setTextViewColor(fragment_calendar_year_month, MyConfig.custom.monthTitleColor);
+        MyConfig.setTextViewBgColor(fragment_calendar_year_month, MyConfig.custom.monthTitleBgColor);
+
+
+        if(MyConfig.custom.weekIndex != null && MyConfig.custom.weekIndex.length == 7) {
+            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_1, MyConfig.custom.weekIndex[0]);
+            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_2, MyConfig.custom.weekIndex[1]);
+            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_3, MyConfig.custom.weekIndex[2]);
+            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_4, MyConfig.custom.weekIndex[3]);
+            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_5, MyConfig.custom.weekIndex[4]);
+            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_6, MyConfig.custom.weekIndex[5]);
+            MyConfig.setTextViewTxt(fragment_calendar_base_day_index_7, MyConfig.custom.weekIndex[6]);
+        }
+
+        MyConfig.setTextViewSize(fragment_calendar_base_day_index_1, MyConfig.custom.weekIndexSize);
+        MyConfig.setTextViewSize(fragment_calendar_base_day_index_2, MyConfig.custom.weekIndexSize);
+        MyConfig.setTextViewSize(fragment_calendar_base_day_index_3, MyConfig.custom.weekIndexSize);
+        MyConfig.setTextViewSize(fragment_calendar_base_day_index_4, MyConfig.custom.weekIndexSize);
+        MyConfig.setTextViewSize(fragment_calendar_base_day_index_5, MyConfig.custom.weekIndexSize);
+        MyConfig.setTextViewSize(fragment_calendar_base_day_index_6, MyConfig.custom.weekIndexSize);
+        MyConfig.setTextViewSize(fragment_calendar_base_day_index_7, MyConfig.custom.weekIndexSize);
+
+        MyConfig.setTextViewColor(fragment_calendar_base_day_index_1, MyConfig.custom.weekIndexColor);
+        MyConfig.setTextViewColor(fragment_calendar_base_day_index_2, MyConfig.custom.weekIndexColor);
+        MyConfig.setTextViewColor(fragment_calendar_base_day_index_3, MyConfig.custom.weekIndexColor);
+        MyConfig.setTextViewColor(fragment_calendar_base_day_index_4, MyConfig.custom.weekIndexColor);
+        MyConfig.setTextViewColor(fragment_calendar_base_day_index_5, MyConfig.custom.weekIndexColor);
+        MyConfig.setTextViewColor(fragment_calendar_base_day_index_6, MyConfig.custom.weekIndexColor);
+        MyConfig.setTextViewColor(fragment_calendar_base_day_index_7, MyConfig.custom.weekIndexColor);
+
+        MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_1, MyConfig.custom.weekIndexBgColor);
+        MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_2, MyConfig.custom.weekIndexBgColor);
+        MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_3, MyConfig.custom.weekIndexBgColor);
+        MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_4, MyConfig.custom.weekIndexBgColor);
+        MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_5, MyConfig.custom.weekIndexBgColor);
+        MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_6, MyConfig.custom.weekIndexBgColor);
+        MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_7, MyConfig.custom.weekIndexBgColor);
     }
 
 

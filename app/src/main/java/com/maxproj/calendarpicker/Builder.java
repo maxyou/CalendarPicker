@@ -3,6 +3,7 @@ package com.maxproj.calendarpicker;
 import android.app.Activity;
 
 import com.maxproj.calendarpicker.Config.MyConfig;
+import com.maxproj.calendarpicker.Models.Custom;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 
 /**
@@ -19,63 +20,63 @@ public class Builder {
      * Calendar Prompt部分
      */
     public Builder setPromptText(String promptText){
-        MyConfig.customize.promptText = promptText;
+        MyConfig.custom.promptText = promptText;
         return this;
     }
 
     public Builder setPromptSize(int promptSize){
-        MyConfig.customize.promptSize = promptSize;
+        MyConfig.custom.promptSize = promptSize;
         return this;
     }
 
     public Builder setPromptColor(int promptColor){
-        MyConfig.customize.promptColor = promptColor;
+        MyConfig.custom.promptColor = promptColor;
         return this;
     }
 
     public Builder setPromptBgColor(int promptBgColor){
-        MyConfig.customize.promptBgColor = promptBgColor;
+        MyConfig.custom.promptBgColor = promptBgColor;
         return this;
     }
 
     public Builder setTodayText(String todayText){
-        MyConfig.customize.todayText = todayText;
+        MyConfig.custom.todayText = todayText;
         return this;
     }
 
     public Builder setTodaySize(int todaySize){
-        MyConfig.customize.todaySize = todaySize;
+        MyConfig.custom.todaySize = todaySize;
         return this;
     }
 
     public Builder setTodayColor(int todayColor){
-        MyConfig.customize.todayColor = todayColor;
+        MyConfig.custom.todayColor = todayColor;
         return this;
     }
 
     public Builder setTodayBgColor(int todayBgColor){
-        MyConfig.customize.todayBgColor = todayBgColor;
+        MyConfig.custom.todayBgColor = todayBgColor;
         return this;
     }
 
     public Builder setSelectedText(String selectedText){
-        MyConfig.customize.selectedText = selectedText;
+        MyConfig.custom.selectedText = selectedText;
         return this;
     }
 
 
     public Builder setSelectedSize(int selectedSize){
-        MyConfig.customize.selectedSize = selectedSize;
+        MyConfig.custom.selectedSize = selectedSize;
         return this;
     }
 
     public Builder setSelectedColor(int selectedColor){
-        MyConfig.customize.selectedColor = selectedColor;
+        MyConfig.custom.selectedColor = selectedColor;
         return this;
     }
 
     public Builder setSelectedBgColor(int selectedBgColor){
-        MyConfig.customize.selectedBgColor = selectedBgColor;
+        MyConfig.custom.selectedBgColor = selectedBgColor;
         return this;
     }
     
@@ -88,16 +89,48 @@ public class Builder {
     }
 
     public Builder setMonthTitle(FormatMonthTitle formatMonthTitle){
-        MyConfig.customize.formatMonthTitle = formatMonthTitle;
+        MyConfig.custom.formatMonthTitle = formatMonthTitle;
         return this;
     }
+
+
+    public Builder setMonthTitleSize(int monthTitleSize){
+        MyConfig.custom.monthTitleSize = monthTitleSize;
+        return this;
+    }
+
+    public Builder setMonthTitleColor(int monthTitleColor){
+        MyConfig.custom.monthTitleColor = monthTitleColor;
+        return this;
+    }
+
+    public Builder setMonthTitleBgColor(int monthTitleBgColor){
+        MyConfig.custom.monthTitleBgColor = monthTitleBgColor;
+        return this;
+    }
+
 
     /**
      * Week Index部分
      */
 
     public Builder setWeekIndex(String index[]){
-        MyConfig.customize.weekIndex = index;
+        MyConfig.custom.weekIndex = index;
+        return this;
+    }
+
+    public Builder setWeekIndexSize(int weekIndexSize){
+        MyConfig.custom.weekIndexSize = weekIndexSize;
+        return this;
+    }
+
+    public Builder setWeekIndexColor(int weekIndexColor){
+        MyConfig.custom.weekIndexColor = weekIndexColor;
+        return this;
+    }
+
+    public Builder setWeekIndexBgColor(int weekIndexBgColor){
+        MyConfig.custom.weekIndexBgColor = weekIndexBgColor;
         return this;
     }
 
@@ -108,7 +141,7 @@ public class Builder {
 
 
     public Builder setPreset(YearMonthDay preset){
-        MyConfig.customize.preset = preset;
+        MyConfig.custom.preset = preset;
         return this;
     }
 
@@ -117,43 +150,43 @@ public class Builder {
      */
 
     public Builder setCancelText(String cancelText){
-        MyConfig.customize.cancelText = cancelText;
+        MyConfig.custom.cancelText = cancelText;
         return this;
     }
 
     public Builder setCancelSize(int cancelSize){
-        MyConfig.customize.cancelSize = cancelSize;
+        MyConfig.custom.cancelSize = cancelSize;
         return this;
     }
 
     public Builder setCancelColor(int cancelColor){
-        MyConfig.customize.cancelColor = cancelColor;
+        MyConfig.custom.cancelColor = cancelColor;
         return this;
     }
 
     public Builder setCancelBgColor(int cancelBgColor){
-        MyConfig.customize.cancelBgColor = cancelBgColor;
+        MyConfig.custom.cancelBgColor = cancelBgColor;
         return this;
     }
 
 
     public Builder setConfirmText(String confirmText){
-        MyConfig.customize.confirmText = confirmText;
+        MyConfig.custom.confirmText = confirmText;
         return this;
     }
 
     public Builder setConfirmSize(int confirmSize){
-        MyConfig.customize.confirmSize = confirmSize;
+        MyConfig.custom.confirmSize = confirmSize;
         return this;
     }
 
     public Builder setConfirmColor(int confirmColor){
-        MyConfig.customize.confirmColor = confirmColor;
+        MyConfig.custom.confirmColor = confirmColor;
         return this;
     }
 
     public Builder setConfirmBgColor(int confirmBgColor){
-        MyConfig.customize.confirmBgColor = confirmBgColor;
+        MyConfig.custom.confirmBgColor = confirmBgColor;
         return this;
     }
 
@@ -169,12 +202,13 @@ public class Builder {
     }
 
 
-//    public Builder build(){
-//        return this;
-//    }
+    public Builder restoreDefault(){
+        MyConfig.custom = new Custom();
+        return this;
+    }
 
     public void show(){
         MyConfig.builder = this;
-        MyConfig.openCalendarPicker(activity, MyConfig.customize.preset, calendarPickerOnConfirm);
+        MyConfig.openCalendarPicker(activity, MyConfig.custom.preset, calendarPickerOnConfirm);
     }
 }

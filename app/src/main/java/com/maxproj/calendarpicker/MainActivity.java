@@ -52,25 +52,33 @@ public class MainActivity extends AppCompatActivity {
                         .setTodayColor(Color.RED)
                         .setTodayBgColor(Color.GREEN)
 
-                        .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
-                        
-                        .setCancelText("取消")
-                        .setCancelSize(12)
-                        .setCancelColor(Color.LTGRAY)
-                        .setCancelBgColor(Color.BLACK)
-                        
-                        .setConfirmText("确定")
-                        .setConfirmSize(16)
-                        .setConfirmColor(Color.RED)
-                        .setConfirmBgColor(Color.GREEN)
-
-                        .setPreset(new YearMonthDay(2017, 12, 4))
                         .setMonthTitle(new Builder.FormatMonthTitle() {
                             @Override
                             public String setMonthTitle(int year, int month) {
                                 return ""+year+"年"+month+"月";
                             }
                         })
+                        .setMonthTitleSize(10)
+                        .setMonthTitleColor(Color.BLUE)
+                        .setMonthTitleBgColor(Color.CYAN)
+
+                        .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
+                        .setWeekIndexSize(16)
+                        .setWeekIndexColor(Color.LTGRAY)
+                        .setWeekIndexBgColor(Color.BLACK)
+                        
+                        .setCancelText("取消")
+                        .setCancelSize(12)
+                        .setCancelColor(Color.LTGRAY)
+                        .setCancelBgColor(Color.BLACK)
+
+                        .setConfirmText("确定")
+                        .setConfirmSize(16)
+                        .setConfirmColor(Color.RED)
+                        .setConfirmBgColor(Color.GREEN)
+
+                        .setPreset(new YearMonthDay(2017, 12, 4))
+                        .restoreDefault()
                         ;
 
                 builder.show();

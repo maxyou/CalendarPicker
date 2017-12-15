@@ -26,34 +26,36 @@ public class FragmentCalendarViewpager extends FragmentBase {
 
     public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
 
-        if(eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null){
+        if (eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null) {
             daySelected.copy(eventCalendarSelectDay.calendarDay);
-        }else {
+        } else {
             daySelected.copy(null);
         }
 
     }
 
-    public interface DayInViewPagerOnClickListener{
+    public interface DayInViewPagerOnClickListener {
         void dayOnClicked(CalendarDay calendarDay);
     }
+
     public DayInViewPagerOnClickListener dayInViewPagerOnClickListener;
 
-    public void setDayClickListener(DayInViewPagerOnClickListener dayInViewPagerOnClickListener){
+    public void setDayClickListener(DayInViewPagerOnClickListener dayInViewPagerOnClickListener) {
         this.dayInViewPagerOnClickListener = dayInViewPagerOnClickListener;
     }
 
-    public void setSelectedDay(CalendarDay day){
+    public void setSelectedDay(CalendarDay day) {
 
         daySelected.copy(day);
     }
-    public void gotoTodayMonth(){
+
+    public void gotoTodayMonth() {
 
         viewPager.setCurrentItem(MonthPagerAdapter.CURRENT_MONTH_IN_SCROLL);
     }
 
-    public void gotoDay(CalendarDay calendarDay){
-        if(calendarDay == null || calendarDay.day == null){
+    public void gotoDay(CalendarDay calendarDay) {
+        if (calendarDay == null || calendarDay.day == null) {
             return;
         }
 
@@ -65,8 +67,8 @@ public class FragmentCalendarViewpager extends FragmentBase {
 
     }
 
-    public void gotoSelectedDay(){
-        if(daySelected == null || daySelected.day == null){
+    public void gotoSelectedDay() {
+        if (daySelected == null || daySelected.day == null) {
             return;
         }
 
@@ -77,10 +79,11 @@ public class FragmentCalendarViewpager extends FragmentBase {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarViewpager.onCreateView");
+
+        Log.d("", "FragmentCalendarChooserDialog: FragmentCalendarViewpager.onCreateView");
         View v = inflater.inflate(R.layout.fragment_calendar_viewpager, null);
 
-        viewPager = (ViewPager)v.findViewById(R.id.calendar_viewpager);
+        viewPager = (ViewPager) v.findViewById(R.id.calendar_viewpager);
         monthPagerAdapter = new MonthPagerAdapter(getFragmentManager());
         viewPager.setAdapter(monthPagerAdapter);
         viewPager.setCurrentItem(MonthPagerAdapter.CURRENT_MONTH_IN_SCROLL);
@@ -143,12 +146,12 @@ public class FragmentCalendarViewpager extends FragmentBase {
                     new FragmentCalendarMonthBase.DayInMonthOnClickListener() {//尽量不用监听器，麻烦且容易遗漏
                         @Override
                         public void dayOnClicked(CalendarDay calendarDay) {
-                            if(dayInViewPagerOnClickListener != null){
+                            if (dayInViewPagerOnClickListener != null) {
                                 dayInViewPagerOnClickListener.dayOnClicked(calendarDay);
                             }
                         }
                     }
-                    );
+            );
             return fragmentCalendarMonthBase;
         }
 
@@ -159,11 +162,11 @@ public class FragmentCalendarViewpager extends FragmentBase {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return ""+position;
+            return "" + position;
         }
     }
 
-    public void closeFragment(){
+    public void closeFragment() {
         getActivity().getFragmentManager().beginTransaction().remove(FragmentCalendarViewpager.this).commit();
     }
 }

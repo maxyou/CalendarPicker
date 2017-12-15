@@ -186,7 +186,7 @@ public class FragmentCalendarPicker extends FragmentBase {
         calendar_time_chooser_panel_confirm = (TextView) v.findViewById(R.id.calendar_time_chooser_panel_confirm);
         calendar_time_chooser_viewpager_container = (FrameLayout) v.findViewById(R.id.calendar_time_chooser_viewpager_container);
 
-        makeOptions();
+        makeCustoms();
 
         calendar_time_chooser_viewpager = new FragmentCalendarViewpager();
 //        calendar_time_chooser_blocks_calendar_viewpager.dayInViewPagerOnClickListener = new FragmentCalendarViewpager.DayInViewPagerOnClickListener() {
@@ -201,32 +201,32 @@ public class FragmentCalendarPicker extends FragmentBase {
         ft.commit();
     }
 
-    private void makeOptions(){
+    private void makeCustoms(){
 
-        MyConfig.setTextViewTxt(calendar_time_chooser_title, MyConfig.customize.promptText);
-        MyConfig.setTextViewSize(calendar_time_chooser_title, MyConfig.customize.promptSize);
-        MyConfig.setTextViewColor(calendar_time_chooser_title, MyConfig.customize.promptColor);
-        MyConfig.setLayoutBgColor(calendar_time_chooser_title_layout, MyConfig.customize.promptBgColor);
+        MyConfig.setTextViewTxt(calendar_time_chooser_title, MyConfig.custom.promptText);
+        MyConfig.setTextViewSize(calendar_time_chooser_title, MyConfig.custom.promptSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_title, MyConfig.custom.promptColor);
+        MyConfig.setLayoutBgColor(calendar_time_chooser_title_layout, MyConfig.custom.promptBgColor);
 
-        MyConfig.setTextViewTxt(calendar_time_chooser_today, MyConfig.customize.todayText);
-        MyConfig.setTextViewSize(calendar_time_chooser_today, MyConfig.customize.todaySize);
-        MyConfig.setTextViewColor(calendar_time_chooser_today, MyConfig.customize.todayColor);
-        MyConfig.setDrawableColor(calendar_time_chooser_today.getBackground(), MyConfig.customize.todayBgColor);
+        MyConfig.setTextViewTxt(calendar_time_chooser_today, MyConfig.custom.todayText);
+        MyConfig.setTextViewSize(calendar_time_chooser_today, MyConfig.custom.todaySize);
+        MyConfig.setTextViewColor(calendar_time_chooser_today, MyConfig.custom.todayColor);
+        MyConfig.setDrawableColor(calendar_time_chooser_today.getBackground(), MyConfig.custom.todayBgColor);
 
-        MyConfig.setTextViewTxt(calendar_time_chooser_selected, MyConfig.customize.selectedText);
-        MyConfig.setTextViewSize(calendar_time_chooser_selected, MyConfig.customize.selectedSize);
-        MyConfig.setTextViewColor(calendar_time_chooser_selected, MyConfig.customize.selectedColor);
-        MyConfig.setDrawableColor(calendar_time_chooser_selected.getBackground(), MyConfig.customize.selectedBgColor);
+        MyConfig.setTextViewTxt(calendar_time_chooser_selected, MyConfig.custom.selectedText);
+        MyConfig.setTextViewSize(calendar_time_chooser_selected, MyConfig.custom.selectedSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_selected, MyConfig.custom.selectedColor);
+        MyConfig.setDrawableColor(calendar_time_chooser_selected.getBackground(), MyConfig.custom.selectedBgColor);
 
-        MyConfig.setTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelText);
-        MyConfig.setTextViewSize(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelSize);
-        MyConfig.setTextViewColor(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelColor);
-        MyConfig.setTextViewBgColor(calendar_time_chooser_panel_cancel, MyConfig.customize.cancelBgColor);        
+        MyConfig.setTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.custom.cancelText);
+        MyConfig.setTextViewSize(calendar_time_chooser_panel_cancel, MyConfig.custom.cancelSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_panel_cancel, MyConfig.custom.cancelColor);
+        MyConfig.setTextViewBgColor(calendar_time_chooser_panel_cancel, MyConfig.custom.cancelBgColor);
 
-        MyConfig.setTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmText);
-        MyConfig.setTextViewSize(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmSize);
-        MyConfig.setTextViewColor(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmColor);
-        MyConfig.setTextViewBgColor(calendar_time_chooser_panel_confirm, MyConfig.customize.confirmBgColor);
+        MyConfig.setTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.custom.confirmText);
+        MyConfig.setTextViewSize(calendar_time_chooser_panel_confirm, MyConfig.custom.confirmSize);
+        MyConfig.setTextViewColor(calendar_time_chooser_panel_confirm, MyConfig.custom.confirmColor);
+        MyConfig.setTextViewBgColor(calendar_time_chooser_panel_confirm, MyConfig.custom.confirmBgColor);
 
     }
 

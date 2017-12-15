@@ -3,7 +3,7 @@ package com.maxproj.calendarpicker.Config;
 import android.app.Application;
 import android.content.Context;
 
-import com.maxproj.calendarpicker.Models.Customize;
+import com.maxproj.calendarpicker.Models.Custom;
 
 public class ApplicationBase extends Application {
 
@@ -17,7 +17,7 @@ public class ApplicationBase extends Application {
 
         MyConfig.app = getApplicationContext();
 
-        MyConfig.customize = new Customize();
+        MyConfig.custom = new Custom();
 
 //        MyConfig.wm = (WindowManager) getSystemService(WINDOW_SERVICE);
 //        Display display = MyConfig.wm.getDefaultDisplay();

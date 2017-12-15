@@ -6,7 +6,7 @@ import com.maxproj.calendarpicker.Builder;
  * Created by youhy on 17/12/11.
  */
 
-public class Customize {
+public class Custom {
 
     /**
      * Calendar Prompt部分
@@ -30,17 +30,18 @@ public class Customize {
      * Month Title部分
      */
     public Builder.FormatMonthTitle formatMonthTitle;
-    public String yearMonth;
-    public Integer yearMonthSize;
-    public Integer yearMonthColor;
-    public Integer yearMonthBgColor;
+//    public String yearMonth;
+    public Integer monthTitleSize;
+    public Integer monthTitleColor;
+    public Integer monthTitleBgColor;
 
     /**
      * Week Index部分
      */
     public String weekIndex[];
-    public Integer weekColor;
-    public Integer weekBgColor;
+    public Integer weekIndexSize;
+    public Integer weekIndexColor;
+    public Integer weekIndexBgColor;
 
 
     /**

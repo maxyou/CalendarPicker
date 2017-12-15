@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.maxproj.calendarpicker.Builder;
 import com.maxproj.calendarpicker.Fragments.FragmentCalendarPicker;
 import com.maxproj.calendarpicker.Models.CalendarMonth;
-import com.maxproj.calendarpicker.Models.Customize;
+import com.maxproj.calendarpicker.Models.Custom;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Models.CalendarWeek;
 import com.maxproj.calendarpicker.R;
@@ -168,7 +168,7 @@ public class MyConfig {
     }
 
     public static Builder builder;
-    public static Customize customize;
+    public static Custom custom;
 
     public static void setTextViewTxt(TextView v, String customStr){
 
