@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                             }
                         })
                         .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
+                        .setCancelText("取消")
+                        .setConfirmText("确定")
                         .setSelectedText("已选")
                         .setTodayText("今天");
 

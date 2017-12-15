@@ -66,6 +66,19 @@ public class Builder {
      * Confirm部分
      */
 
+    public Builder setCancelText(String cancelText){
+        MyConfig.customize.cancel = cancelText;
+        return this;
+    }
+
+    public Builder setConfirmText(String confirmText){
+        MyConfig.customize.confirm = confirmText;
+        return this;
+    }
+
+
+
+
     public interface CalendarPickerOnConfirm {
         void onComplete(YearMonthDay yearMonthDay);
     }
@@ -74,6 +87,7 @@ public class Builder {
         this.activity = activity;
         this.calendarPickerOnConfirm = calendarPickerOnConfirm;
     }
+
 
 //    public Builder build(){
 //        return this;

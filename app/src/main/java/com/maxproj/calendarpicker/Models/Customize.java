@@ -44,5 +44,6 @@ public class Customize {
     public int day_other_month_bg_color;
     public int day_today_color;
     public int day_selected_color;
-    
+
+
 }

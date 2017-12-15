@@ -207,6 +207,8 @@ public class FragmentCalendarPicker extends FragmentBase {
 
         MyConfig.customTextViewTxt(calendar_time_chooser_today, MyConfig.customize.today, null);
         MyConfig.customTextViewTxt(calendar_time_chooser_selected, MyConfig.customize.selected, null);
+        MyConfig.customTextViewTxt(calendar_time_chooser_panel_cancel, MyConfig.customize.cancel, null);
+        MyConfig.customTextViewTxt(calendar_time_chooser_panel_confirm, MyConfig.customize.confirm, null);
 
     }
 
