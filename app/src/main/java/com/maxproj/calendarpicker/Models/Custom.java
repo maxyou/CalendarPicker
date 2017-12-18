@@ -54,6 +54,7 @@ public class Custom {
     public Integer dayBgColor;
     public Integer dayOtherMonthColor;
     public Integer dayOtherMonthBgColor;
+    public Integer monthBaseBgColor;
 
     /**
      * Confirm部分

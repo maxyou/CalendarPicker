@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         .setDaySize(16)
                         .setDayColor(Color.BLUE)
                         .setDayOtherMonthColor(0xFF87CEFA)
+                        .setMonthBaseBgColor(0xFFE0FFFF)
 
 //                        .restoreDefault()
                         ;

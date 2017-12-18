@@ -165,6 +165,11 @@ public class Builder {
         return this;
     }
 
+    public Builder setMonthBaseBgColor(int monthBaseBgColor){
+        MyConfig.custom.monthBaseBgColor = monthBaseBgColor;
+        return this;
+    }
+
     /**
      * Confirm部分
      */

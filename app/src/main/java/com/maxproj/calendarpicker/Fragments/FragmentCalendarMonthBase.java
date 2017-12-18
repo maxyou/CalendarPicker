@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.maxproj.calendarpicker.Models.CalendarDay;
@@ -21,6 +22,9 @@ import de.greenrobot.event.EventBus;
 
 
 public class FragmentCalendarMonthBase extends FragmentBase {
+
+    LinearLayout fragment_calendar_base;
+    TextView fragment_calendar_year_month;
 
     TextView fragment_calendar_base_day_index_1;
     TextView fragment_calendar_base_day_index_2;
@@ -40,7 +44,6 @@ public class FragmentCalendarMonthBase extends FragmentBase {
     CalendarMonth calendarMonth;
     CalendarDay daySelected = new CalendarDay(null);
 
-    TextView fragment_calendar_year_month;
 
     public interface DayInMonthOnClickListener{
         public void dayOnClicked(CalendarDay calendarDay);
@@ -79,6 +82,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         Log.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
         View v = inflater.inflate(R.layout.fragment_calendar_base, null);
 
+        fragment_calendar_base = (LinearLayout)v.findViewById(R.id.fragment_calendar_base);
         fragment_calendar_year_month = (TextView)v.findViewById(R.id.fragment_calendar_year_month);
 
         fragment_calendar_base_day_index_1 = (TextView) v.findViewById(R.id.fragment_calendar_base_day_index_1);
@@ -126,6 +130,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
     private void makeCustoms() {
 
+        MyConfig.setLayoutBgColor(fragment_calendar_base, MyConfig.custom.monthBaseBgColor);
 
         if(MyConfig.custom.formatMonthTitle != null){
             fragment_calendar_year_month.setText(MyConfig.custom.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
