@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.maxproj.calendarpicker.Config.MyConfig;
 import com.maxproj.calendarpicker.Models.CalendarDay;
 import com.maxproj.calendarpicker.R;
 
@@ -85,9 +86,18 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
              * 被选择
              */
 
-            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_selected_circle));
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_selected));
             calendar_day_in_month.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.month_day_selected));
+
+            if(MyConfig.custom.selectedColor != null) {
+                MyConfig.setTextViewColor(calendar_day_in_month, MyConfig.custom.selectedColor);
+            }else{
+                calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_selected));
+            }
+
+            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_selected_circle));
+            if(MyConfig.custom.selectedBgColor != null) {
+                MyConfig.setDrawableColor(calendar_day_layout.getBackground(), MyConfig.custom.selectedBgColor);
+            }
 
         }else if(calendarDay.day.equals(new LocalDate())){
 
@@ -95,9 +105,18 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
              * 今天
              */
 
-            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_today_circle));
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_selected));
             calendar_day_in_month.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.month_day_today));
+
+            if(MyConfig.custom.todayColor != null){
+                MyConfig.setTextViewColor(calendar_day_in_month, MyConfig.custom.todayColor);
+            }else{
+                calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_selected));
+            }
+
+            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_today_circle));
+            if(MyConfig.custom.todayBgColor != null) {
+                MyConfig.setDrawableColor(calendar_day_layout.getBackground(), MyConfig.custom.todayBgColor);
+            }
 
         }else{
 

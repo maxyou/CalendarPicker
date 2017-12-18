@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                         .setPromptText("请选择日期")
+                        .setPromptSize(14)
                         .setPromptColor(Color.RED)
                         .setPromptBgColor(Color.YELLOW)
-                        .setPromptSize(14)
 
                         .setSelectedText("已选")
                         .setSelectedSize(12)
@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
                         .setConfirmBgColor(Color.GREEN)
 
                         .setPreset(new YearMonthDay(2017, 12, 4))
-                        .restoreDefault()
+
+//                        .restoreDefault()
                         ;
 
                 builder.show();
