@@ -17,16 +17,12 @@ import android.widget.Toast;
 import com.maxproj.calendarpicker.Builder;
 import com.maxproj.calendarpicker.Fragments.FragmentCalendarPicker;
 import com.maxproj.calendarpicker.Models.CalendarMonth;
+import com.maxproj.calendarpicker.Models.CalendarWeek;
 import com.maxproj.calendarpicker.Models.Custom;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
-import com.maxproj.calendarpicker.Models.CalendarWeek;
-import com.maxproj.calendarpicker.R;
 
 import org.joda.time.DateTimeConstants;
 import org.joda.time.LocalDate;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by youhy on 17/12/4.
@@ -35,39 +31,34 @@ import java.util.Date;
 public class MyConfig {
 
     public static Context app;
+    public static Builder builder;
+    public static Custom custom;
 
-//    public static WindowManager wm;
-//    public static float scale;
-//    public static int screenWidth;
-//    public static int screenHeight;
-
-    public static int dp2Px(Context context, float dp) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (dp * scale + 0.5f); //from http://developer.android.com/guide/practices/screens_support.html#screen-independence
-//        return (int) Math.round(scale * dp);
-    }
-
-    public static int px2dip(Context context, float pxValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (pxValue / scale + 0.5f);
-    }
-
-    public static int getPxFromDimen(Context context, int dimen_id) {
-        return context.getResources().getDimensionPixelSize(dimen_id);
-    }
-
-    public static Date string_yyyy_MM_dd_HH_mm2Date(String time) {
-        Date date;
-
-        SimpleDateFormat df = new SimpleDateFormat(MyConfig.app.getString(R.string.time_yyyy_MM_dd_HH_mm));
-        //df.setTimeZone(TimeZone.getTimeZone("GMT+00:00"));
-        try {
-            date = df.parse(time);
-        } catch (Exception e) {
-            date = null;
-        }
-        return date;
-    }
+//    public static int dp2Px(float dp) {
+//        final float scale = app.getResources().getDisplayMetrics().density;
+//        return (int) (dp * scale + 0.5f); //from http://developer.android.com/guide/practices/screens_support.html#screen-independence
+//    }
+//
+//    public static int px2dip(float pxValue) {
+//        final float scale = app.getResources().getDisplayMetrics().density;
+//        return (int) (pxValue / scale + 0.5f);
+//    }
+//
+//    public static int getPxFromDimen(int dimen_id) {
+//        return app.getResources().getDimensionPixelSize(dimen_id);
+//    }
+//
+//    public static Date string_yyyy_MM_dd_HH_mm2Date(String time) {
+//        Date date;
+//
+//        SimpleDateFormat df = new SimpleDateFormat(MyConfig.app.getString(R.string.time_yyyy_MM_dd_HH_mm));
+//        try {
+//            date = df.parse(time);
+//        } catch (Exception e) {
+//            date = null;
+//        }
+//        return date;
+//    }
 
     public static CalendarWeek getWeekIncludeThisDay(LocalDate localDate) {
 
@@ -96,7 +87,6 @@ public class MyConfig {
 
 
     public static CalendarMonth getMonthIncludeThisDay(LocalDate localDate) {
-
 
         CalendarMonth calendarMonth = new CalendarMonth();
 
@@ -167,43 +157,44 @@ public class MyConfig {
 
     }
 
-    public static Builder builder;
-    public static Custom custom;
-
     public static void setTextViewTxt(TextView v, String customStr){
 
         if(customStr != null){
             v.setText(customStr);
             return;
         }
-
     }
 
     public static void setTextViewSize(TextView v, Integer custom_size_sp){
+
         if(custom_size_sp != null) {
             v.setTextSize(TypedValue.COMPLEX_UNIT_SP, custom_size_sp);
         }
     }
 
     public static void setTextViewColor(TextView v, Integer customColor){
+
         if(customColor != null) {
             v.setTextColor(customColor);
         }
     }
 
     public static void setTextViewBgColor(TextView v, Integer customColor){
+
         if(customColor != null) {
             v.setBackgroundColor(customColor);
         }
     }
 
     public static void setLayoutBgColor(LinearLayout v, Integer customColor){
+
         if(customColor != null) {
             v.setBackgroundColor(customColor);
         }
     }
 
     public static void setDrawableColor(Drawable v, Integer customColor){
+
         if(customColor != null) {
             if (v instanceof ShapeDrawable) {
                 ((ShapeDrawable)v).getPaint().setColor(customColor);
