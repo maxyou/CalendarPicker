@@ -245,7 +245,7 @@ public class FragmentCalendarPicker extends FragmentBase {
             public void run() {
                 initMonth();
             }
-        }, 100);
+        }, 0);
 
     }
 
