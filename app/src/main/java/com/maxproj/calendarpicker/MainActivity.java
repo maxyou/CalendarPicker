@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         .setConfirmBgColor(Color.GREEN)
 
                         .setPreset(new YearMonthDay(2017, 12, 4))
+                        .setDaySize(16)
 
 //                        .restoreDefault()
                         ;

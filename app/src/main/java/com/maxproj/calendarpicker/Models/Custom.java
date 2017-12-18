@@ -49,12 +49,11 @@ public class Custom {
      */
     public YearMonthDay preset;
 
+    public Integer daySize;
     public Integer dayColor;
     public Integer dayBgColor;
     public Integer dayOtherMonthColor;
     public Integer dayOtherMonthBgColor;
-    public Integer dayTodayColor;
-    public Integer daySelectedColor;
 
     /**
      * Confirm部分

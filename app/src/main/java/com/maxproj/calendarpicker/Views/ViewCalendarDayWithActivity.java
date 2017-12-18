@@ -127,6 +127,8 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
             calendar_day_layout.setBackgroundColor(Color.TRANSPARENT);
             calendar_day_in_month.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.month_day));
 
+            MyConfig.setTextViewSize(calendar_day_in_month, MyConfig.custom.daySize);
+
         }
 
         this.setOnClickListener(new OnClickListener() {

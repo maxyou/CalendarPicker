@@ -145,6 +145,10 @@ public class Builder {
         return this;
     }
 
+    public Builder setDaySize(int daySize){
+        MyConfig.custom.daySize = daySize;
+        return this;
+    }
     /**
      * Confirm部分
      */
