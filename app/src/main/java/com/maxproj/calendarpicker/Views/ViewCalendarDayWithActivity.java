@@ -72,13 +72,7 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
             calendar_day_have_activity.setVisibility(GONE);
         }
 
-        if(calendarDay.day.getMonthOfYear() == highLightMonth){
-//            calendar_day_layout.setBackgroundColor(getResources().getColor(R.color.LightGrey));
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_current));
-        }else{
-//            calendar_day_layout.setBackgroundColor(Color.TRANSPARENT);
-            calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_other));
-        }
+
 
         if(highLightDay != null && calendarDay.day.equals(highLightDay.day)){
 
@@ -129,6 +123,13 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
 
             MyConfig.setTextViewSize(calendar_day_in_month, MyConfig.custom.daySize);
 
+            if(calendarDay.day.getMonthOfYear() == highLightMonth){//当月
+                calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_current));
+                MyConfig.setTextViewColor(calendar_day_in_month, MyConfig.custom.dayColor);
+            }else{//前后月
+                calendar_day_in_month.setTextColor(getResources().getColor(R.color.month_day_other));
+                MyConfig.setTextViewColor(calendar_day_in_month, MyConfig.custom.dayOtherMonthColor);
+            }
         }
 
         this.setOnClickListener(new OnClickListener() {

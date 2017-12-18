@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
                         .setPreset(new YearMonthDay(2017, 12, 4))
                         .setDaySize(16)
+                        .setDayColor(Color.BLUE)
+                        .setDayOtherMonthColor(0xFF87CEFA)
 
 //                        .restoreDefault()
                         ;

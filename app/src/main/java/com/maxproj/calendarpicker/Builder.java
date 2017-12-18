@@ -149,6 +149,22 @@ public class Builder {
         MyConfig.custom.daySize = daySize;
         return this;
     }
+
+    public Builder setDayColor(int dayColor){
+        MyConfig.custom.dayColor = dayColor;
+        return this;
+    }
+
+    public Builder setDayBgColor(int dayBgColor){
+        MyConfig.custom.dayBgColor = dayBgColor;
+        return this;
+    }
+
+    public Builder setDayOtherMonthColor(int dayOtherMonthColor){
+        MyConfig.custom.dayOtherMonthColor = dayOtherMonthColor;
+        return this;
+    }
+
     /**
      * Confirm部分
      */
