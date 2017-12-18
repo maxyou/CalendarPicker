@@ -66,6 +66,7 @@ public class FragmentCalendarPicker extends FragmentBase {
         initClickListener();
 
         orientationSaved = getActivity().getRequestedOrientation();
+        Log.d("","orientation ---- saved:"+orientationSaved);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         return v;
@@ -250,14 +251,12 @@ public class FragmentCalendarPicker extends FragmentBase {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-
+    public void onDestroyView() {
+        super.onDestroyView();
         getActivity().setRequestedOrientation(orientationSaved);
+        Log.d("","orientation ---- after restore onDestroyView:"+getActivity().getRequestedOrientation());
     }
-//    public void onEventMainThread(EventHeartOneSecond eventHeartOneSecond) {
-//
-//    }
+
 
     public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
 

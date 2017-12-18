@@ -80,7 +80,9 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
+        if(calendarMonth == null){
+            return null;
+        }
 
         Log.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
         View v = inflater.inflate(R.layout.fragment_calendar_base, null);
@@ -201,9 +203,6 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
         return f;
     }
-
-
-
 
 
 }
