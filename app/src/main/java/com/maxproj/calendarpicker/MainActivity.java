@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
                         .setSelectedText("已选")
                         .setSelectedSize(12)
-                        .setSelectedColor(Color.LTGRAY)
-                        .setSelectedBgColor(Color.BLACK)
+                        .setSelectedColor(0xFF330DCE)
+                        .setSelectedBgColor(0xFFD0CE33)
 
                         .setTodayText("今天")
                         .setTodaySize(16)
@@ -65,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
                         .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
                         .setWeekIndexSize(16)
                         .setWeekIndexColor(Color.LTGRAY)
-                        .setWeekIndexBgColor(Color.BLACK)
+                        .setWeekIndexBgColor(0xFF236587)
                         
                         .setCancelText("取消")
                         .setCancelSize(12)
                         .setCancelColor(Color.LTGRAY)
-                        .setCancelBgColor(Color.BLACK)
+                        .setCancelBgColor(0xFFA079BE)
 
                         .setConfirmText("确定")
                         .setConfirmSize(16)

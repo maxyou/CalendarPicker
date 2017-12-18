@@ -1,6 +1,7 @@
 package com.maxproj.calendarpicker.Fragments;
 
 import android.app.FragmentTransaction;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -42,6 +43,7 @@ public class FragmentCalendarPicker extends FragmentBase {
     YearMonthDay yearMonthDayPreset;
     YearMonthDay yearMonthDaySelected;
 
+    int orientationSaved;
 
     public Builder.CalendarPickerOnConfirm calendarPickerOnConfirm;
 
@@ -62,6 +64,9 @@ public class FragmentCalendarPicker extends FragmentBase {
         findViews(v);
 
         initClickListener();
+
+        orientationSaved = getActivity().getRequestedOrientation();
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         return v;
     }
@@ -244,7 +249,12 @@ public class FragmentCalendarPicker extends FragmentBase {
 
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
 
+        getActivity().setRequestedOrientation(orientationSaved);
+    }
 //    public void onEventMainThread(EventHeartOneSecond eventHeartOneSecond) {
 //
 //    }
