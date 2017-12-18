@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                         .setPromptText("请选择日期")
-                        .setPromptSize(14)
+                        .setPromptSize(18)
                         .setPromptColor(Color.RED)
                         .setPromptBgColor(Color.YELLOW)
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                                 return ""+year+"年"+month+"月";
                             }
                         })
-                        .setMonthTitleSize(10)
+                        .setMonthTitleSize(16)
                         .setMonthTitleColor(Color.BLUE)
                         .setMonthTitleBgColor(Color.CYAN)
 
