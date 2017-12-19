@@ -3,7 +3,6 @@ package com.maxproj.calendarpicker.Fragments;
 import android.app.Fragment;
 import android.os.Bundle;
 
-
 import de.greenrobot.event.EventBus;
 
 
@@ -39,6 +38,5 @@ public class FragmentBase extends Fragment {
         }
 
     }
-
 
 }

@@ -1,7 +1,6 @@
 package com.maxproj.calendarpicker;
 
 import android.app.Activity;
-import android.content.pm.ActivityInfo;
 
 import com.maxproj.calendarpicker.Config.MyConfig;
 import com.maxproj.calendarpicker.Models.Custom;

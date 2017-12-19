@@ -137,7 +137,7 @@ public class MyConfig {
                 calendarPickerOnConfirm);
         FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         ft.add(android.R.id.content, fragmentCalendarPicker);
-//        ft.addToBackStack("com.maxproj.calendarpicker");
+        ft.addToBackStack("com.maxproj.calendarpicker");
         ft.commit();
     }
 

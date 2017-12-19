@@ -15,8 +15,8 @@ import android.widget.TextView;
 import com.maxproj.calendarpicker.Builder;
 import com.maxproj.calendarpicker.Config.MyConfig;
 import com.maxproj.calendarpicker.Models.CalendarDay;
-import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Models.EventCalendarSelectDay;
+import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.R;
 
 import de.greenrobot.event.EventBus;
@@ -58,7 +58,7 @@ public class FragmentCalendarPicker extends FragmentBase {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarChooserDialog.onCreateView");
+        Log.d("", "FragmentCalendarChooserDialog: FragmentCalendarChooserDialog.onCreateView");
         View v = inflater.inflate(R.layout.fragment_calendar_picker, null);
 
         findViews(v);
@@ -66,19 +66,19 @@ public class FragmentCalendarPicker extends FragmentBase {
         initClickListener();
 
         orientationSaved = getActivity().getRequestedOrientation();
-        Log.d("","orientation ---- saved:"+orientationSaved);
+        Log.d("", "orientation ---- saved:" + orientationSaved);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         return v;
     }
 
-    private void initMonth(){
+    private void initMonth() {
 
-        if(yearMonthDayPreset != null && yearMonthDayPreset.year != -1) {
+        if (yearMonthDayPreset != null && yearMonthDayPreset.year != -1) {
             daySelected = new CalendarDay(yearMonthDayPreset.year, yearMonthDayPreset.month, yearMonthDayPreset.day);
         }
 
-        if(daySelected != null) {
+        if (daySelected != null) {
 
             new Handler().postDelayed(new Runnable() {
                 /**
@@ -91,11 +91,11 @@ public class FragmentCalendarPicker extends FragmentBase {
             }, 100);
         }
 
-        if(daySelected != null && MyConfig.custom.jump2Preset) {
+        if (daySelected != null && MyConfig.custom.jump2Preset) {
 
             calendar_time_chooser_viewpager.gotoDay(CalendarDay.clone(daySelected));
 
-        }else{
+        } else {
 
             calendar_time_chooser_viewpager.gotoTodayMonth();
         }
@@ -108,8 +108,7 @@ public class FragmentCalendarPicker extends FragmentBase {
     }
 
 
-
-    private void closeFragment(){
+    private void closeFragment() {
 
         calendar_time_chooser_layout.animate().y(getActivity().findViewById(android.R.id.content).getHeight()).setDuration(300).withEndAction(new Runnable() {
             @Override
@@ -121,7 +120,7 @@ public class FragmentCalendarPicker extends FragmentBase {
         });
     }
 
-    private void initClickListener(){
+    private void initClickListener() {
 
         calendar_time_chooser_mask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,7 +134,7 @@ public class FragmentCalendarPicker extends FragmentBase {
             @Override
             public void onClick(View v) {
 
-                    closeFragment();
+                closeFragment();
             }
         });
 
@@ -145,17 +144,17 @@ public class FragmentCalendarPicker extends FragmentBase {
 
 //                    calendar_time_chooser_layout.animate().x(-MyConfig.screenWidth).setDuration(500);
 
-                    if (daySelected == null) {
+                if (daySelected == null) {
 //                        MyConfig.MyToast(0, getActivity(), getActivity().getResources().getString(R.string.calendar_chooser_date_prompt));
-                        return;
-                    }
+                    return;
+                }
                 yearMonthDaySelected = new YearMonthDay(
                         daySelected.day.getYearOfEra(),
                         daySelected.day.getMonthOfYear(),
                         daySelected.day.getDayOfMonth()
                 );
 
-                if(calendarPickerOnConfirm != null){
+                if (calendarPickerOnConfirm != null) {
                     calendarPickerOnConfirm.onComplete(yearMonthDaySelected);
                 }
 
@@ -204,11 +203,11 @@ public class FragmentCalendarPicker extends FragmentBase {
 //        };
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.calendar_time_chooser_viewpager_container, calendar_time_chooser_viewpager, FRAGMENT_VIEWPAGER_TAG);
-        ft.addToBackStack(FRAGMENT_VIEWPAGER_TAG);
+//        ft.addToBackStack(FRAGMENT_VIEWPAGER_TAG);
         ft.commit();
     }
 
-    private void makeCustoms(){
+    private void makeCustoms() {
 
         MyConfig.setTextViewTxt(calendar_time_chooser_title, MyConfig.custom.promptText);
         MyConfig.setTextViewSize(calendar_time_chooser_title, MyConfig.custom.promptSize);
@@ -253,17 +252,18 @@ public class FragmentCalendarPicker extends FragmentBase {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+
         getActivity().setRequestedOrientation(orientationSaved);
-        Log.d("","orientation ---- after restore onDestroyView:"+getActivity().getRequestedOrientation());
+        Log.d("", "orientation ---- after restore onDestroyView:" + getActivity().getRequestedOrientation());
     }
 
 
     public void onEventMainThread(EventCalendarSelectDay eventCalendarSelectDay) {
 
-        if(eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null){
+        if (eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null) {
 
             daySelected = CalendarDay.clone(eventCalendarSelectDay.calendarDay);
-        }else {
+        } else {
 
         }
     }

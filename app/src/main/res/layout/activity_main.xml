@@ -5,17 +5,18 @@
     android:orientation="vertical">
 
     <Button
-        android:layout_gravity="center_horizontal"
         android:id="@+id/button_open"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:text="Default" />
+
     <Button
-        android:layout_gravity="center_horizontal"
         android:id="@+id/button_preset"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:text="Customized" />
 
