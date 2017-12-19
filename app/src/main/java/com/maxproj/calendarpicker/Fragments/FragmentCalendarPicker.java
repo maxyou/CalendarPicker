@@ -59,7 +59,7 @@ public class FragmentCalendarPicker extends FragmentBase {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         Log.d("","FragmentCalendarChooserDialog: FragmentCalendarChooserDialog.onCreateView");
-        View v = inflater.inflate(R.layout.fragment_calendar_time_chooser, null);
+        View v = inflater.inflate(R.layout.fragment_calendar_picker, null);
 
         findViews(v);
 
