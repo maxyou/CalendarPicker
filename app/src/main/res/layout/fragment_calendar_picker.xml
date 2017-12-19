@@ -33,7 +33,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="Please Pick A Day"
+                android:text="Please Pick a Day"
                 android:textColor="@color/calendar_title_text"
                 android:textSize="18sp" />
 

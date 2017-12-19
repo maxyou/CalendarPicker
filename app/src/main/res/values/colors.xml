@@ -24,9 +24,9 @@
     <color name="month_day_other">@color/LightGrey</color>
 
     <color name="month_day_selected">@color/White</color>
-    <color name="month_day_selected_bg">@color/Red</color>
+    <color name="month_day_selected_bg">@color/Green</color>
     <color name="month_day_today">@color/White</color>
-    <color name="month_day_today_bg">@color/DodgerBlue</color>
+    <color name="month_day_today_bg">@color/Blue</color>
 
     <color name="calendar_confirm_bg">@color/White</color>
     <color name="calendar_confirm_text">@color/DimGray</color>

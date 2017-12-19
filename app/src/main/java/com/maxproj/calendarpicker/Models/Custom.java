@@ -11,20 +11,20 @@ public class Custom {
     /**
      * Calendar Prompt部分
      */
-    public String promptText;
-    public Integer promptSize;
-    public Integer promptColor;
-    public Integer promptBgColor;
+    public String promptText = "Please Pick a Day";
+    public Integer promptSize = 18;
+    public Integer promptColor = 0xFF696969;
+    public Integer promptBgColor = 0xFFFFFFFF;
 
-    public String todayText;
-    public Integer todaySize;
-    public Integer todayColor;
-    public Integer todayBgColor;
+    public String todayText = "Today";
+    public Integer todaySize = 12;
+    public Integer todayColor = 0xFFFFFFFF;;
+    public Integer todayBgColor = 0xFF1E90FF;
 
-    public String selectedText;
-    public Integer selectedSize;
-    public Integer selectedColor;
-    public Integer selectedBgColor;
+    public String selectedText = "Selected";
+    public Integer selectedSize = 12;
+    public Integer selectedColor = 0xFFFFFFFF;;
+    public Integer selectedBgColor = 0xFF00BF00;
 
     /**
      * Month Title部分
@@ -65,8 +65,8 @@ public class Custom {
     public Integer cancelBgColor;
     public String confirmText;
     public Integer confirmSize;
-    public Integer confirmColor;
-    public Integer confirmBgColor;
+    public Integer confirmColor = 0xFFFF0000;
+    public Integer confirmBgColor = 0xFF00FF00;
 
 
     /**
