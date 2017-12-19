@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
                         .setPromptBgColor(Color.YELLOW)
 
                         .setSelectedText("已选")
-                        .setSelectedSize(12)
+                        .setSelectedSize(16)
                         .setSelectedColor(0xFF330DCE)
                         .setSelectedBgColor(0xFF1E90FF)
 
                         .setTodayText("今天")
-                        .setTodaySize(16)
+                        .setTodaySize(12)
                         .setTodayColor(Color.RED)
                         .setTodayBgColor(Color.GREEN)
 
@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                         .setDayOtherMonthColor(0xFF87CEFA)
                         .setMonthBaseBgColor(0xFFE0FFFF)
 
+                        .setJump2Preset(false)
 //                        .restoreDefault()
                         ;
 

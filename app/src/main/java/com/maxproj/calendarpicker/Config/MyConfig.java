@@ -2,7 +2,6 @@ package com.maxproj.calendarpicker.Config;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
@@ -31,11 +30,11 @@ import org.joda.time.LocalDate;
 
 public class MyConfig {
 
-    public static Context app;
+    public static Activity activity;
     public static Builder builder;
-    public static Custom custom;
+    public static Custom custom = new Custom();
 
-    public static boolean isPortraitStatus(Activity activity){
+    public static boolean isPortraitStatus(){
 
         View contentView = activity.findViewById(android.R.id.content);
 
@@ -131,7 +130,7 @@ public class MyConfig {
 
 
 
-    public static void openCalendarPicker(Activity activity, YearMonthDay preset, Builder.CalendarPickerOnConfirm calendarPickerOnConfirm) {
+    public static void openCalendarPicker(YearMonthDay preset, Builder.CalendarPickerOnConfirm calendarPickerOnConfirm) {
 
         FragmentCalendarPicker fragmentCalendarPicker = FragmentCalendarPicker.newInstance(
                 preset,
@@ -148,7 +147,7 @@ public class MyConfig {
         uiRun(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(app, s, Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, s, Toast.LENGTH_SHORT).show();
             }
         });
 

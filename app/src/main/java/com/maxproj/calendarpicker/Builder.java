@@ -13,7 +13,6 @@ import com.maxproj.calendarpicker.Models.YearMonthDay;
 
 public class Builder {
 
-    private Activity activity;
     private CalendarPickerOnConfirm calendarPickerOnConfirm;
 
 
@@ -222,7 +221,7 @@ public class Builder {
     }
 
     public Builder(Activity activity, CalendarPickerOnConfirm calendarPickerOnConfirm) {
-        this.activity = activity;
+        MyConfig.activity = activity;
         this.calendarPickerOnConfirm = calendarPickerOnConfirm;
     }
 
@@ -241,10 +240,10 @@ public class Builder {
 
     public void show() {
 
-        if (MyConfig.isPortraitStatus(activity)) {
+        if (MyConfig.isPortraitStatus()) {
 
             MyConfig.builder = this;
-            MyConfig.openCalendarPicker(activity, MyConfig.custom.preset, calendarPickerOnConfirm);
+            MyConfig.openCalendarPicker(MyConfig.custom.preset, calendarPickerOnConfirm);
         }else{
             MyConfig.uiToast("not in portrait status");
         }
