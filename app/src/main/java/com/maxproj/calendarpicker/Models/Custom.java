@@ -23,7 +23,7 @@ public class Custom {
 
     public String selectedText = "Selected";
     public Integer selectedSize = 12;
-    public Integer selectedColor = 0xFFFFFFFF;;
+    public Integer selectedColor = 0xFFFFFFFF;
     public Integer selectedBgColor = 0xFF00BF00;
 
     /**
@@ -61,18 +61,18 @@ public class Custom {
     /**
      * Confirm部分
      */
-    public String cancelText;
-    public Integer cancelSize;
-    public Integer cancelColor;
-    public Integer cancelBgColor;
-    public String confirmText;
-    public Integer confirmSize;
-    public Integer confirmColor = 0xFFFF0000;
-    public Integer confirmBgColor = 0xFF00FF00;
+    public String cancelText = "Cancel";
+    public Integer cancelSize = 16;
+    public Integer cancelColor = 0xFF696969;;
+    public Integer cancelBgColor = 0xFFFFFFFF;
+    public String confirmText = "Confirm";
+    public Integer confirmSize = 16;
+    public Integer confirmColor = 0xFF696969;
+    public Integer confirmBgColor = 0xFFFFFFFF;
 
 
     /**
      * jump to preset if have
      */
-    public boolean jump2Preset;
+    public boolean jump2Preset = true;
 }
