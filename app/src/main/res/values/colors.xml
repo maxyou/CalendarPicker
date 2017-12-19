@@ -16,7 +16,7 @@
     <color name="month_base_bg">@color/BlanchedAlmond</color>
 
     <color name="month_title_bg">@color/transparent</color>
-    <color name="month_title_text">#222222</color>
+    <color name="month_title_text">@color/DimGray</color>
 
     <color name="month_in_week_index">@color/Chocolate</color>
 

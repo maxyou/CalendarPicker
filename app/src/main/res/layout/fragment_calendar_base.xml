@@ -10,6 +10,7 @@
         android:id="@+id/fragment_calendar_year_month"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:textColor="@color/month_title_text"
         android:gravity="center"
         android:textSize="@dimen/month_title" />
 

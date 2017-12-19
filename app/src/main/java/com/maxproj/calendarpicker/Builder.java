@@ -156,10 +156,10 @@ public class Builder {
         return this;
     }
 
-    public Builder setDayBgColor(int dayBgColor) {
-        MyConfig.custom.dayBgColor = dayBgColor;
-        return this;
-    }
+//    public Builder setDayBgColor(int dayBgColor) {
+//        MyConfig.custom.dayBgColor = dayBgColor;
+//        return this;
+//    }
 
     public Builder setDayOtherMonthColor(int dayOtherMonthColor) {
         MyConfig.custom.dayOtherMonthColor = dayOtherMonthColor;
