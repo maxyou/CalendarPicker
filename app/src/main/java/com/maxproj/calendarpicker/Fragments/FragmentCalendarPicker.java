@@ -80,9 +80,6 @@ public class FragmentCalendarPicker extends FragmentBase {
 
         if(daySelected != null) {
 
-            calendar_time_chooser_viewpager.gotoDay(CalendarDay.clone(daySelected));
-//            calendar_time_chooser_blocks_calendar_viewpager.setSelectedDay(CalendarDay.clone(daySelected));
-
             new Handler().postDelayed(new Runnable() {
                 /**
                  * 由于viewpager的当前item未必已经构建，所以这里需要延迟发送
@@ -92,18 +89,22 @@ public class FragmentCalendarPicker extends FragmentBase {
                     EventBus.getDefault().post(new EventCalendarSelectDay(CalendarDay.clone(daySelected)));
                 }
             }, 100);
+        }
+
+        if(daySelected != null && MyConfig.custom.jump2Preset) {
+
+            calendar_time_chooser_viewpager.gotoDay(CalendarDay.clone(daySelected));
+
         }else{
+
             calendar_time_chooser_viewpager.gotoTodayMonth();
         }
 
         calendar_time_chooser_layout.setVisibility(View.VISIBLE);
-//        calendar_time_chooser_layout.setY(getActivity().findViewById(android.R.id.content).getY());
         calendar_time_chooser_layout.setY(getActivity().findViewById(android.R.id.content).getHeight());
-//        calendar_time_chooser_layout.setTranslationY(MyConfig.dp2Px(getActivity(), 50));
 
         calendar_time_chooser_layout.animate().y(getActivity().findViewById(android.R.id.content).getHeight()
                 - calendar_time_chooser_layout.getHeight()).setDuration(300);
-//        calendar_time_chooser_layout.animate().y(MyConfig.screenHeight - MyConfig.dp2Px(getActivity(), 100)).setDuration(300);
     }
 
 

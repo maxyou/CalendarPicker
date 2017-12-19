@@ -10,14 +10,14 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="no preset" />
+        android:text="default size and color" />
     <Button
         android:layout_gravity="center_horizontal"
         android:id="@+id/button_preset"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="preset 2016-7-4" />
+        android:text="preset all size and color" />
 
 
 </LinearLayout>

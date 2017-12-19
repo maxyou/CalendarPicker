@@ -22,7 +22,14 @@ public class MainActivity extends AppCompatActivity {
         button_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyConfig.openCalendarPicker(MainActivity.this, null, null);
+                Builder builder = new Builder(MainActivity.this, new Builder.CalendarPickerOnConfirm() {
+                    @Override
+                    public void onComplete(YearMonthDay yearMonthDay) {
+                        MyConfig.uiToast("You pick "+yearMonthDay.year+"-"+yearMonthDay.month+"-"+yearMonthDay.day);
+                    }
+                })
+                        .restoreDefault();
+                builder.show();
             }
         });
 
@@ -77,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         .setConfirmColor(Color.RED)
                         .setConfirmBgColor(Color.GREEN)
 
-                        .setPreset(new YearMonthDay(2017, 12, 4))
+                        .setPreset(new YearMonthDay(2017, 11, 4))
                         .setDaySize(16)
                         .setDayColor(Color.BLUE)
                         .setDayOtherMonthColor(0xFF87CEFA)

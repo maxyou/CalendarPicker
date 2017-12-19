@@ -69,4 +69,8 @@ public class Custom {
     public Integer confirmBgColor;
 
 
+    /**
+     * jump to preset if have
+     */
+    public boolean jump2Preset;
 }

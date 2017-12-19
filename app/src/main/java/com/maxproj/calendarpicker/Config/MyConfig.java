@@ -10,6 +10,7 @@ import android.graphics.drawable.ShapeDrawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.TypedValue;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,21 @@ public class MyConfig {
     public static Context app;
     public static Builder builder;
     public static Custom custom;
+
+    public static boolean isPortraitStatus(Activity activity){
+
+        View contentView = activity.findViewById(android.R.id.content);
+
+        int height = contentView.getHeight();
+        int width = contentView.getWidth();
+
+        if (height > width){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 
 //    public static int dp2Px(float dp) {
 //        final float scale = app.getResources().getDisplayMetrics().density;
