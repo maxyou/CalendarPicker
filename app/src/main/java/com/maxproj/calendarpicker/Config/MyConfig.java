@@ -173,6 +173,15 @@ public class MyConfig {
 
     }
 
+    public static void setYearMonthTxt(TextView v, int year, int month){
+
+        if(MyConfig.custom.formatMonthTitle != null){
+            v.setText(MyConfig.custom.formatMonthTitle.setMonthTitle(year, month));
+        }else{
+            v.setText(year+" - "+month);
+        }
+    }
+
     public static void setTextViewTxt(TextView v, String customStr){
 
         if(customStr != null){

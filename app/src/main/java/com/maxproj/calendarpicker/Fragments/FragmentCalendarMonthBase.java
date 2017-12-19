@@ -137,11 +137,13 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
         MyConfig.setLayoutBgColor(fragment_calendar_base, MyConfig.custom.monthBaseBgColor);
 
-        if(MyConfig.custom.formatMonthTitle != null){
-            fragment_calendar_year_month.setText(MyConfig.custom.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
-        }else{
-            fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
-        }
+        MyConfig.setYearMonthTxt(fragment_calendar_year_month, calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
+//        if(MyConfig.custom.formatMonthTitle != null){
+//            fragment_calendar_year_month.setText(MyConfig.custom.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
+//        }else{
+//            fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
+//        }
+
         MyConfig.setTextViewSize(fragment_calendar_year_month, MyConfig.custom.monthTitleSize);
         MyConfig.setTextViewColor(fragment_calendar_year_month, MyConfig.custom.monthTitleColor);
         MyConfig.setTextViewBgColor(fragment_calendar_year_month, MyConfig.custom.monthTitleBgColor);
