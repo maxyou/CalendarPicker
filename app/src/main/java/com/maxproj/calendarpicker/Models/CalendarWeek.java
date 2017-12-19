@@ -4,9 +4,7 @@ import org.joda.time.LocalDate;
 
 import java.util.LinkedList;
 
-/**
- * Created by youhy on 5/13/15.
- */
+
 public class CalendarWeek {
     /**
      * 注意，week和年月日是不同的体系，往往跨越年和月，所以定义特殊

@@ -1,14 +1,13 @@
 package com.maxproj.calendarpicker;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.maxproj.calendarpicker.Fragments.FragmentCalendarPicker;
-import com.maxproj.calendarpicker.Models.YearMonthDay;
 import com.maxproj.calendarpicker.Config.MyConfig;
+import com.maxproj.calendarpicker.Models.YearMonthDay;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         })
                         .setMonthTitleSize(16)
                         .setMonthTitleColor(0xFFB22222)
-                        .setMonthTitleBgColor(0xFFD3D3D3)
+                        .setMonthTitleBgColor(0xFF93D353)
 
                         .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
                         .setWeekIndexSize(16)
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         .setDayOtherMonthColor(0xFF87CEFA)
                         .setMonthBaseBgColor(0xFFE0FFFF)
 
-                        .setJump2Preset(false)
+                        .setJump2Preset(true)
 //                        .restoreDefault()
                         ;
 

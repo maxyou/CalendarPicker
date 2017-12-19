@@ -3,7 +3,6 @@ package com.maxproj.calendarpicker.Views;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;

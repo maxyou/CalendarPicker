@@ -35,7 +35,7 @@ public class FragmentCalendarPicker extends FragmentBase {
     TextView calendar_time_chooser_panel_cancel;
     TextView calendar_time_chooser_panel_confirm;
 
-    final String FRAGMENT_VIEWPAGER_TAG = "fragment_calendar_time_chooser";
+    final String FRAGMENT_VIEWPAGER_TAG = "fragment_calendar_picker";
 
     FragmentCalendarViewpager calendar_time_chooser_viewpager;
 
@@ -204,7 +204,7 @@ public class FragmentCalendarPicker extends FragmentBase {
 //        };
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.calendar_time_chooser_viewpager_container, calendar_time_chooser_viewpager, FRAGMENT_VIEWPAGER_TAG);
-//        ft.addToBackStack(FRAGMENT_VIEWPAGER_TAG);
+        ft.addToBackStack(FRAGMENT_VIEWPAGER_TAG);
         ft.commit();
     }
 
@@ -240,7 +240,6 @@ public class FragmentCalendarPicker extends FragmentBase {
     @Override
     public void onResume() {
         super.onResume();
-
 
         new Handler().postDelayed(new Runnable() {
             @Override

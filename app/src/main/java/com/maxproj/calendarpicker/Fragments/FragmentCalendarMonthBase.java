@@ -46,7 +46,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
 
 
     public interface DayInMonthOnClickListener{
-        public void dayOnClicked(CalendarDay calendarDay);
+        void dayOnClicked(CalendarDay calendarDay);
     }
     public DayInMonthOnClickListener dayInMonthOnClickListener;
 
@@ -84,7 +84,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
             return null;
         }
 
-        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
+//        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
         View v = inflater.inflate(R.layout.fragment_calendar_base, null);
 
         fragment_calendar_base = (LinearLayout)v.findViewById(R.id.fragment_calendar_base);
@@ -138,11 +138,6 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         MyConfig.setLayoutBgColor(fragment_calendar_base, MyConfig.custom.monthBaseBgColor);
 
         MyConfig.setYearMonthTxt(fragment_calendar_year_month, calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
-//        if(MyConfig.custom.formatMonthTitle != null){
-//            fragment_calendar_year_month.setText(MyConfig.custom.formatMonthTitle.setMonthTitle(calendarMonth.firstDayOfCurrentMonth.getYear(), calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()));
-//        }else{
-//            fragment_calendar_year_month.setText(calendarMonth.firstDayOfCurrentMonth.getYear()+" - "+calendarMonth.firstDayOfCurrentMonth.getMonthOfYear());
-//        }
 
         MyConfig.setTextViewSize(fragment_calendar_year_month, MyConfig.custom.monthTitleSize);
         MyConfig.setTextViewColor(fragment_calendar_year_month, MyConfig.custom.monthTitleColor);
@@ -183,18 +178,6 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_6, MyConfig.custom.weekIndexBgColor);
         MyConfig.setTextViewBgColor(fragment_calendar_base_day_index_7, MyConfig.custom.weekIndexBgColor);
     }
-
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
 
     public static FragmentCalendarMonthBase newInstance(LocalDate localDate, CalendarDay daySelected, FragmentCalendarMonthBase.DayInMonthOnClickListener dayInMonthOnClickListener) {
 

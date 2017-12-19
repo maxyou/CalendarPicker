@@ -6,9 +6,7 @@ import org.joda.time.LocalDate;
 
 
 
-/**
- * Created by youhy on 5/13/15.
- */
+
 public class CalendarDay {
 
     public org.joda.time.LocalDate day;
