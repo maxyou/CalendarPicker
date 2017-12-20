@@ -1,10 +1,13 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.maxyou'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.maxproj.calendarpicker"
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
