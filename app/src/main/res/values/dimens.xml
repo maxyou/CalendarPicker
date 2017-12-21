@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="month_title">18sp</dimen>
+    <dimen name="com_maxproj_calendarpicker_month_title">18sp</dimen>
 
 </resources>

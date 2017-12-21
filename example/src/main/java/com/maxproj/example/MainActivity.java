@@ -1,11 +1,12 @@
-package com.maxproj.calendarpicker;
+package com.maxproj.example;
 
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.maxproj.calendarpicker.Builder;
 import com.maxproj.calendarpicker.Config.MyConfig;
 import com.maxproj.calendarpicker.Models.YearMonthDay;
 
@@ -14,8 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.com_maxproj_calendarpicker_activity_main);
-
+        setContentView(R.layout.activity_main);
 
         Button button_open = (Button) findViewById(R.id.button_open);
         button_open.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         .setWeekIndexSize(16)
                         .setWeekIndexColor(0xFFFF00FF)
                         .setWeekIndexBgColor(0xFFADD8E6)
-                        
+
                         .setCancelText("取消")
                         .setCancelSize(12)
                         .setCancelColor(Color.LTGRAY)
@@ -97,6 +97,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
 }

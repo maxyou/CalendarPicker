@@ -85,7 +85,7 @@ public class FragmentCalendarMonthBase extends FragmentBase {
         }
 
 //        Log.d("","FragmentCalendarChooserDialog: FragmentCalendarMonthBase.onCreateView " + calendarMonth.firstDayOfCurrentMonth.getMonthOfYear()+"月");
-        View v = inflater.inflate(R.layout.fragment_calendar_base, null);
+        View v = inflater.inflate(R.layout.com_maxproj_calendarpicker_fragment_calendar_base, null);
 
         fragment_calendar_base = (LinearLayout)v.findViewById(R.id.fragment_calendar_base);
         fragment_calendar_year_month = (TextView)v.findViewById(R.id.fragment_calendar_year_month);

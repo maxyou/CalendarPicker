@@ -81,7 +81,7 @@ public class FragmentCalendarViewpager extends FragmentBase {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         Log.d("", "FragmentCalendarChooserDialog: FragmentCalendarViewpager.onCreateView");
-        View v = inflater.inflate(R.layout.fragment_calendar_viewpager, null);
+        View v = inflater.inflate(R.layout.com_maxproj_calendarpicker_fragment_calendar_viewpager, null);
 
         viewPager = (ViewPager) v.findViewById(R.id.calendar_viewpager);
         monthPagerAdapter = new MonthPagerAdapter(getFragmentManager());

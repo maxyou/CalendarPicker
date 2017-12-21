@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/month_day_current"
+        android:textColor="@color/com_maxproj_calendarpicker_month_day_current"
         android:textSize="14sp" />
 
     <ImageView
@@ -19,6 +19,6 @@
         android:layout_width="4dp"
         android:layout_height="4dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/audio_unread_dot_3x" />
+        android:src="@drawable/com_maxproj_calendarpicker_audio_unread_dot_3x" />
 
 </LinearLayout>

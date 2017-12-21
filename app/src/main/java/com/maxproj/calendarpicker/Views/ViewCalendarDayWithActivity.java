@@ -39,7 +39,7 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
 
     private void inflate(Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View v = inflater.inflate(R.layout.calendar_day_with_activity, this, true);
+        View v = inflater.inflate(R.layout.com_maxproj_calendarpicker_calendar_day_with_activity, this, true);
 
         calendar_day_layout = (LinearLayout)v.findViewById(R.id.calendar_day_layout);
         calendar_day_have_activity = (ImageView) v.findViewById(R.id.calendar_day_have_activity);
@@ -83,7 +83,7 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
 
             MyConfig.setTextViewColor(calendar_day_in_month, MyConfig.custom.selectedColor);
 
-            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_selected_circle));
+            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.com_maxproj_calendarpicker_calendar_selected_circle));
             MyConfig.setDrawableColor(calendar_day_layout.getBackground(), MyConfig.custom.selectedBgColor);
 
         }else if(calendarDay.day.equals(new LocalDate())){
@@ -96,7 +96,7 @@ public class ViewCalendarDayWithActivity extends LinearLayout {
 
             MyConfig.setTextViewColor(calendar_day_in_month, MyConfig.custom.todayColor);
 
-            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.calendar_today_circle));
+            calendar_day_layout.setBackground(getResources().getDrawable(R.drawable.com_maxproj_calendarpicker_calendar_today_circle));
             MyConfig.setDrawableColor(calendar_day_layout.getBackground(), MyConfig.custom.todayBgColor);
 
         }else{

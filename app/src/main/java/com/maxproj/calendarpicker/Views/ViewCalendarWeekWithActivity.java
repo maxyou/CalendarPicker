@@ -47,7 +47,7 @@ public class ViewCalendarWeekWithActivity extends LinearLayout {
 
     private void inflate(Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View v = inflater.inflate(R.layout.calendar_week_with_activity, this, true);
+        View v = inflater.inflate(R.layout.com_maxproj_calendarpicker_calendar_week_with_activity, this, true);
 
         calendar_week_day_layout = (LinearLayout)v.findViewById(R.id.calendar_week_day_layout);
 

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.5"
-        android:background="@color/Black" />
+        android:background="@color/com_maxproj_calendarpicker_Black" />
 
     <LinearLayout
         android:id="@+id/calendar_time_chooser_layout"
@@ -22,7 +22,7 @@
             android:id="@+id/calendar_time_chooser_title_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/calendar_title_bg"
+            android:background="@color/com_maxproj_calendarpicker_calendar_title_bg"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -34,7 +34,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="Please Pick a Day"
-                android:textColor="@color/calendar_title_text"
+                android:textColor="@color/com_maxproj_calendarpicker_calendar_title_text"
                 android:textSize="18sp" />
 
             <TextView
@@ -43,12 +43,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/shape_button_bg_selected"
+                android:background="@drawable/com_maxproj_calendarpicker_shape_button_bg_selected"
                 android:gravity="center"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:text="Selected"
-                android:textColor="@color/calendar_title_selected_day"
+                android:textColor="@color/com_maxproj_calendarpicker_calendar_title_selected_day"
                 android:textSize="12sp" />
 
             <TextView
@@ -59,12 +59,12 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/shape_button_bg_today"
+                android:background="@drawable/com_maxproj_calendarpicker_shape_button_bg_today"
                 android:gravity="center"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:text="Today"
-                android:textColor="@color/calendar_title_today"
+                android:textColor="@color/com_maxproj_calendarpicker_calendar_title_today"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -81,7 +81,7 @@
             android:id="@+id/calendar_time_chooser_panel_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/calendar_confirm_bg"
+            android:background="@color/com_maxproj_calendarpicker_calendar_confirm_bg"
             android:orientation="horizontal">
 
             <TextView
@@ -92,7 +92,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Cancel"
-                android:textColor="@color/calendar_confirm_text"
+                android:textColor="@color/com_maxproj_calendarpicker_calendar_confirm_text"
                 android:textSize="16sp" />
 
             <TextView
@@ -103,7 +103,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Confirm"
-                android:textColor="@color/calendar_confirm_text"
+                android:textColor="@color/com_maxproj_calendarpicker_calendar_confirm_text"
                 android:textSize="16sp" />
 
         </LinearLayout>
