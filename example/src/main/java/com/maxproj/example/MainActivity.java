@@ -43,20 +43,20 @@ public class MainActivity extends AppCompatActivity {
                         MyConfig.uiToast("You pick "+yearMonthDay.year+"-"+yearMonthDay.month+"-"+yearMonthDay.day);
                     }
                 })
-                        .setPromptText("请选择日期")
+                        .setPromptText("选择一个日期")
                         .setPromptSize(18)
                         .setPromptColor(Color.RED)
-                        .setPromptBgColor(Color.YELLOW)
+                        .setPromptBgColor(0xFFFFFFFF)
 
                         .setSelectedText("已选")
-                        .setSelectedSize(16)
-                        .setSelectedColor(0xFF330DCE)
+                        .setSelectedSize(14)
+                        .setSelectedColor(Color.WHITE)
                         .setSelectedBgColor(0xFF1E90FF)
 
                         .setTodayText("今天")
-                        .setTodaySize(12)
-                        .setTodayColor(Color.RED)
-                        .setTodayBgColor(Color.GREEN)
+                        .setTodaySize(14)
+                        .setTodayColor(Color.DKGRAY)
+                        .setTodayBgColor(Color.YELLOW)
 
                         .setMonthTitle(new Builder.FormatMonthTitle() {
                             @Override
@@ -66,28 +66,28 @@ public class MainActivity extends AppCompatActivity {
                         })
                         .setMonthTitleSize(16)
                         .setMonthTitleColor(0xFFB22222)
-                        .setMonthTitleBgColor(0xFF93D353)
+                        .setMonthTitleBgColor(0x00000000)
 
                         .setWeekIndex(new String[]{"一", "二", "三", "四", "五", "六", "日"})
                         .setWeekIndexSize(16)
                         .setWeekIndexColor(0xFFFF00FF)
-                        .setWeekIndexBgColor(0xFFADD8E6)
+                        .setWeekIndexBgColor(0x00000000)
 
                         .setCancelText("取消")
-                        .setCancelSize(12)
-                        .setCancelColor(Color.LTGRAY)
-                        .setCancelBgColor(0xFFA079BE)
+                        .setCancelSize(14)
+                        .setCancelColor(Color.RED)
+                        .setCancelBgColor(0xFFFFFFFF)
 
                         .setConfirmText("确定")
-                        .setConfirmSize(16)
+                        .setConfirmSize(14)
                         .setConfirmColor(Color.RED)
-                        .setConfirmBgColor(Color.GREEN)
+                        .setConfirmBgColor(0xFFB0E0E6)
 
                         .setPreset(new YearMonthDay(2017, 11, 4))
                         .setDaySize(16)
                         .setDayColor(Color.BLUE)
                         .setDayOtherMonthColor(0xFF87CEFA)
-                        .setMonthBaseBgColor(0xFFE0FFFF)
+                        .setMonthBaseBgColor(0xFFD0EED0)
 
                         .setJump2Preset(true)
 //                        .restoreDefault()
