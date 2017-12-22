@@ -11,7 +11,7 @@ Can preset a selected day. Can customize almost all text size, color, bg color, 
 
 ![pic][1]
 
-  [1]: https://raw.githubusercontent.com/maxyou/CalendarPicker/master/calendar_picker_demo.gif
+  [1]: https://raw.githubusercontent.com/maxyou/CalendarPicker/master/ezgif.com-resize.gif
 
 ## License<br>
 under [MIT License](http://www.opensource.org/licenses/MIT).
