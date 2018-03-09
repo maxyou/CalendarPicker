@@ -29,7 +29,7 @@ Update:<br>
   Add the dependency:
 
     dependencies {
-        compile 'com.github.maxyou:CalendarPicker:v1.0.3'
+        compile 'com.github.maxyou:CalendarPicker:v1.1.0'
     }
 
 
