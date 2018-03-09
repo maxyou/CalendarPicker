@@ -263,6 +263,9 @@ public class FragmentCalendarPicker extends FragmentBase {
         if (eventCalendarSelectDay != null && eventCalendarSelectDay.calendarDay != null) {
 
             daySelected = CalendarDay.clone(eventCalendarSelectDay.calendarDay);
+
+            calendar_time_chooser_selected.setVisibility(View.VISIBLE);
+
         } else {
 
         }

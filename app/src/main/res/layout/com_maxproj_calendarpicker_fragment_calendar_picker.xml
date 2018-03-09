@@ -28,6 +28,7 @@
 
             <TextView
                 android:id="@+id/calendar_time_chooser_title"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -39,6 +40,7 @@
 
             <TextView
                 android:id="@+id/calendar_time_chooser_selected"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
