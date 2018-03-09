@@ -6,7 +6,7 @@ Calendar Picker
 
 Can preset a selected day. Can customize almost all text size, color, bg color, and month title.
 
-Update:
+Update:<br>
     v1.1: If no preset day, hide Selected button. Show if a day be clicked.
 
 
