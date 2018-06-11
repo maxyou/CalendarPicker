@@ -7,8 +7,8 @@ Calendar Picker
 Can preset a selected day. Can customize almost all text size, color, bg color, and month title.
 
 Update:<br>
-    v1.1: If no preset day, hide Selected button. Show it when a day be clicked.
-    v1.1.2: Remove no needed example code and intent filter which create no needed launch icon.
+    v1.1: If no preset day, hide Selected button. Show it when a day be clicked.<br>
+    v1.1.2: Remove no needed example code and intent filter which create no needed launch icon.<br>
 
 
 [demo apk](https://github.com/maxyou/CalendarPicker/blob/master/example-release.apk?raw=true)<br>
